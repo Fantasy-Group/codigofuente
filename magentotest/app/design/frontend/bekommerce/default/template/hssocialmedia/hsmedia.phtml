@@ -1,0 +1,126 @@
+<?php if (Mage::helper('hssocialmedia')->getModuleStatus() != 0) : ?>
+    <?php if (Mage::helper('hssocialmedia')->getJsStatus() != 0) :
+        ?>
+        <script src="<?php echo $this->getSkinUrl('js/hsmedia/jquery.js'); ?>"></script>
+        <script src="<?php echo $this->getSkinUrl('js/hsmedia/hssocial.js'); ?>"></script>
+    <?php else: ?>
+        <script src="<?php echo $this->getSkinUrl('js/hsmedia/hssocial.js'); ?>"></script>
+    <?php  endif; ?>
+    <?php if (Mage::helper('hssocialmedia')->getButtonPosition() == 2) : ?>
+        <link rel="stylesheet" type="text/css" href="<?php echo $this->getSkinUrl('css/hsmedia/hsmedia-left.css'); ?>"
+              media="all"/>
+    <?php endif; ?>
+    <?php
+    if (Mage::helper('hssocialmedia')->getMargin() != ''):
+        $margin = "style=margin-top:" . Mage::helper('hssocialmedia')->getMargin() . "px";
+    else :
+        $margin = "";
+    endif;
+    ?>
+    <div class="social-icons" <?php echo $margin; ?>>
+        <?php if (Mage::helper('hssocialmedia')->getFacebookUrl() != ''): ?>
+            <a class="socialitems" target="_blank" href="<?php echo Mage::helper('hssocialmedia')->getFacebookUrl(); ?>"
+               id="facebook-btn">
+                <span class="social-icon">
+                    <span
+                        class="social-text"><?php echo $this->__(Mage::helper('hssocialmedia')->getFacebookTitle()) ?></span>
+                </span>
+            </a>
+        <?php endif; ?>
+        <?php if (Mage::helper('hssocialmedia')->getLinkidinUrl() != ''): ?>
+            <a class="socialitems" target="_blank" href="<?php echo Mage::helper('hssocialmedia')->getLinkidinUrl() ?>"
+               id="linkedin-btn">
+                <span class="social-icon">
+                    <span
+                        class="social-text"><?php echo $this->__(Mage::helper('hssocialmedia')->getLinkidinTitle()) ?></span>
+                </span>
+            </a>
+        <?php endif; ?>
+        <?php if (Mage::helper('hssocialmedia')->getTwitterUrl() != ''): ?>
+            <a class="socialitems" target="_blank" href="<?php echo Mage::helper('hssocialmedia')->getTwitterUrl() ?>"
+               id="twitter-btn">
+                <span class="social-icon">
+                    <span
+                        class="social-text"><?php echo $this->__(Mage::helper('hssocialmedia')->getTwitterTitle()) ?></span>
+                </span>
+            </a>
+        <?php endif; ?>
+        <?php if (Mage::helper('hssocialmedia')->getYoutubeUrl() != ''): ?>
+            <a class="socialitems" target="_blank" href="<?php echo Mage::helper('hssocialmedia')->getYoutubeUrl() ?>"
+               id="youtube-btn">
+                <span class="social-icon">
+                    <span
+                        class="social-text"><?php echo $this->__(Mage::helper('hssocialmedia')->getYoutubeTitle()) ?></span>
+                </span>
+            </a>
+        <?php endif; ?>
+        <?php if (Mage::helper('hssocialmedia')->getGoogleUrl() != ''): ?>
+            <a class="socialitems" target="_blank" href="<?php echo Mage::helper('hssocialmedia')->getGoogleUrl() ?>"
+               id="google-btn">
+                <span class="social-icon">
+                    <span
+                        class="social-text"><?php echo $this->__(Mage::helper('hssocialmedia')->getGoogleTitle()) ?></span>
+                </span>
+            </a>
+        <?php endif; ?>
+        <?php if (Mage::helper('hssocialmedia')->getPinterestUrl() != ''): ?>
+            <a class="socialitems" target="_blank" href="<?php echo Mage::helper('hssocialmedia')->getPinterestUrl() ?>"
+               id="pintrest-btn">
+                <span class="social-icon">
+                    <span
+                        class="social-text"><?php echo $this->__(Mage::helper('hssocialmedia')->getPinterestTitle()) ?></span>
+                </span>
+            </a>
+        <?php endif; ?>
+        <?php if (Mage::helper('hssocialmedia')->getInstagramUrl() != ''): ?>
+            <a class="socialitems" target="_blank" href="<?php echo Mage::helper('hssocialmedia')->getInstagramUrl() ?>"
+               id="instagram-btn">
+                <span class="social-icon">
+                    <span
+                        class="social-text"><?php echo $this->__(Mage::helper('hssocialmedia')->getInstagramTitle()) ?></span>
+                </span>
+            </a>
+        <?php endif; ?>
+        <?php if (Mage::helper('hssocialmedia')->getFlickrUrl() != ''): ?>
+            <a class="socialitems" target="_blank" href="<?php echo Mage::helper('hssocialmedia')->getFlickrUrl() ?>"
+               id="flickr-btn">
+                <span class="social-icon">
+                    <span
+                        class="social-text"><?php echo $this->__(Mage::helper('hssocialmedia')->getFlickrTitle()) ?></span>
+                </span>
+            </a>
+        <?php endif; ?>
+        <?php if (Mage::helper('hssocialmedia')->getWebUrl() != ''): ?>
+            <a class="socialitems" target="_blank" href="<?php echo Mage::helper('hssocialmedia')->getWebUrl() ?>"
+               id="web-btn">
+                <span class="social-icon">
+                    <span
+                        class="social-text"><?php echo $this->__(Mage::helper('hssocialmedia')->getWebTitle()) ?></span>
+                </span>
+            </a>
+        <?php endif; ?>
+        <?php if (Mage::helper('hssocialmedia')->getMailUrl() != ''): ?>
+            <a class="socialitems" target="_blank" href="mailto:<?php echo Mage::helper('hssocialmedia')->getMailUrl() ?>"
+               id="mail-btn">
+                <span class="social-icon">
+                    <span
+                        class="social-text"><?php echo $this->__(Mage::helper('hssocialmedia')->getMailTitle()) ?></span>
+                </span>
+            </a>
+        <?php endif; ?>
+    </div>
+    <script>
+        $mtkb(window).load(function () {
+            $mtkb('.social-icons .social-icon').mouseenter(function () {
+                $mtkb(this).stop();
+                $mtkb(this).animate({width: '160'}, 500, '<?php  echo Mage::helper('hssocialmedia')->getEffect();?>', function () {
+                });
+            });
+            $mtkb('.social-icons .social-icon').mouseleave(function () {
+                $mtkb(this).stop();
+                $mtkb(this).animate({width: '43'}, 500, '<?php  echo Mage::helper('hssocialmedia')->getEffect();?>', function () {
+                });
+            });
+        });
+    </script>
+<?php endif; ?>

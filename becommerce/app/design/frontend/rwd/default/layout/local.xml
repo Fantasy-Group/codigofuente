@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<layout>
+	<default>
+		<remove name="checkout.cart.shipping" />
+		<action method="addItem">
+			<type>skin_js</type>
+			<name>js/jquery.js</name>
+		</action>
+		<action method="addItem">
+			<type>skin_js</type>
+			<name>js/swiper.js</name>
+		</action>
+		<action method="addCss">
+			<stylesheet>css/swiper.css</stylesheet>
+		</action>
+		<!--<reference name="head">
+			<action method="addItem">
+				<type>skin_js</type>
+				<name>js/jquery.js</name>
+			</action>
+			<action method="addItem">
+				<type>skin_js</type>
+				<name>js/script.js</name>
+			</action>
+			<action method="addItem">
+				<type>skin_js</type>
+				<name>js/bundle.js</name>
+			</action>
+			<action method="addItem">
+				<type>skin_js</type>
+				<name>js/giftmessage.js</name>
+			</action>
+			<action method="addItem">
+				<type>skin_js</type>
+				<name>js/ie6.js</name>
+			</action>
+			<action method="addItem">
+				<type>skin_js</type>
+				<name>js/msrp.js</name>
+			</action>
+			<action method="addItem">
+				<type>skin_js</type>
+				<name>js/opcheckout.js</name>
+			</action>
+			<action method="addItem">
+				<type>skin_js</type>
+				<name>js/checkout/review.js</name>
+			</action>
+			<action method="addCss">
+				<stylesheet>css/flexslider.css</stylesheet>
+			</action>
+		</reference>-->
+		<!--<reference name="head">
+                <action method="addJs"><script>lib/jquery/jquery-1.10.2.min.js</script></action>
+                <action method="addJs"><script>lib/jquery/noconflict.js</script></action>
+                <action method="addItem"><type>skin_js</type><name>js/lib/modernizr.custom.min.js</name></action>
+                <action method="addItem"><type>skin_js</type><name>js/lib/selectivizr.js</name></action>
+                <action method="addItem"><type>skin_js</type><name>js/lib/matchMedia.js</name></action>
+                <action method="addItem"><type>skin_js</type><name>js/lib/matchMedia.addListener.js</name></action>
+                <action method="addItem"><type>skin_js</type><name>js/lib/enquire.js</name></action>
+                <action method="addItem"><type>skin_js</type><name>js/app.js</name></action>
+                <action method="addItem"><type>skin_js</type><name>js/lib/jquery.cycle2.min.js</name></action>
+                <action method="addItem"><type>skin_js</type><name>js/lib/jquery.cycle2.swipe.min.js</name></action>
+                <action method="addItem"><type>skin_js</type><name>js/slideshow.js</name></action>
+                <action method="addItem"><type>skin_js</type><name>js/lib/imagesloaded.js</name></action>
+				<action method="addItem"><type>skin_js</type><name>js/minicart.js</name></action>
+		</reference>-->
+	</default>
+	
+</layout>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>Wyomind_OrdersEraser</name>
+    <version>4.0.2</version>
+    <stability>stable</stability>
+    <license>GPL</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Orders eraser allows to simply clean your sales database by deleting any useless orders and linked invoices and/or shipping in once.</summary>
+    <description>Orders eraser allows to simply clean your sales database by deleting any useless orders and linked invoices and/or shipping in once.</description>
+    <notes>none</notes>
+    <authors><author><name>Wyomind</name><user>auto-converted</user><email>contact@wyomind.com</email></author></authors>
+    <date>2013-02-28</date>
+    <time>10:04:42</time>
+    <contents><target name="magecommunity"><dir name="Wyomind"><dir name="Orderseraser"><dir name="Block"><dir name="Order"><file name="Grid.php" hash="d61585596941f1360b6668185415617f"/></dir></dir><dir name="Model"><file name="Observer.php" hash="fe0857376834be4a0c2084b1303f3140"/><file name="Orderseraser.php" hash="e526e08d4b600653aa72e37000ff13e3"/></dir><dir name="controllers"><dir name="Adminhtml"><file name="OrderseraserController.php" hash="fb9ec155f7e795700d43a43548ebfc77"/></dir></dir><dir name="etc"><file name="config.xml" hash="cfe48ca9d090cd38e6a4dbc3b949d104"/><file name="system.xml" hash="8d37d12b5d8c5673eff53db06569ae8d"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Wyomind_Orderseraser.xml" hash="21f24202ef69e71be030f0ebd62ab7f2"/></dir></target></contents>
+    <compatible/>
+    <dependencies/>
+</package>

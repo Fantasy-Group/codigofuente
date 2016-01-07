@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Webtex
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA that is bundled
+ * with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://www.webtexsoftware.com/LICENSE.txt
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to info@webtexsoftware.com and we will send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade the extension to newer
+ * versions in the future. If you wish to customize the extension for your
+ * needs please refer to http://www.webtexsoftware.com for more information,
+ * or contact us through this email: info@webtexsoftware.com.
+ *
+ * @category   Webtex
+ * @package    Webtex_PriorityShipping
+ * @copyright  Copyright (c) 2015 Webtex Solutions, LLC (http://www.webtexsoftware.com/)
+ * @license    http://www.webtexsoftware.com/LICENSE.txt End-User License Agreement
+ */
+-->
+<config>
+    <modules>
+        <Webtex_PriorityShipping>
+            <version>1.0.0</version>
+        </Webtex_PriorityShipping>
+    </modules>
+    <global>
+        <models>
+            <pShipping>
+                <class>Webtex_PriorityShipping_Model</class>
+                <resourceModel>pShipping_resource</resourceModel>
+            </pShipping>
+            <pShipping_resource>
+                <class>Webtex_PriorityShipping_Model_Resource</class>
+                <entities>
+                    <tablerate>
+                        <table>webtex_priority_tablerate</table>
+                    </tablerate>
+                </entities>
+            </pShipping_resource>
+        </models>
+        <resources>
+            <pShipping_setup>
+                <setup>
+                    <module>Webtex_PriorityShipping</module>
+                    <class>Mage_Eav_Model_Entity_Setup</class>
+                </setup>
+            </pShipping_setup>
+        </resources>
+        <blocks>
+            <pShipping>
+                <class>Webtex_PriorityShipping_Block</class>
+            </pShipping>
+        </blocks>
+        <helpers>
+            <pShipping>
+                <class>Webtex_PriorityShipping_Helper</class>
+            </pShipping>
+        </helpers>
+    </global>
+    <admin>
+        <routers>
+            <pShipping>
+                <use>admin</use>
+                <args>
+                    <module>Webtex_PriorityShipping</module>
+                    <frontName>pShipping</frontName>
+                </args>
+            </pShipping>
+        </routers>
+    </admin>
+    <default>
+        <carriers>
+            <webtexPriority>
+                <active>0</active>
+                <sallowspecific>0</sallowspecific>
+                <model>pShipping/tablerate</model>
+                <condition_name>package_weight</condition_name>
+                <include_virtual_price>1</include_virtual_price>
+                <standard_name>Standard</standard_name>
+                <expedited_name>Expedited</expedited_name>
+                <priority_name>Priority</priority_name>
+                <title>Fulfillment by Amazon</title>
+                <specificerrmsg>This shipping method is currently unavailable. If you would like to ship using this shipping method, please contact us.</specificerrmsg>
+                <handling_type>F</handling_type>
+            </webtexPriority>
+        </carriers>
+    </default>
+    <phpunit>
+        <suite>
+            <modules>
+                <Webtex_PriorityShipping />
+            </modules>
+        </suite>
+    </phpunit>
+</config>

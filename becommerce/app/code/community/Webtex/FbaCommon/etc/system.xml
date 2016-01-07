@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Webtex
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA that is bundled
+ * with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://www.webtexsoftware.com/LICENSE.txt
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to info@webtexsoftware.com and we will send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade the extension to newer
+ * versions in the future. If you wish to customize the extension for your
+ * needs please refer to http://www.webtexsoftware.com for more information,
+ * or contact us through this email: info@webtexsoftware.com.
+ *
+ * @category   Webtex
+ * @package    Webtex_FbaCommon
+ * @copyright  Copyright (c) 2015 Webtex Solutions, LLC (http://www.webtexsoftware.com/)
+ * @license    http://www.webtexsoftware.com/LICENSE.txt End-User License Agreement
+ */
+-->
+<config>
+    <sections>
+        <fba translate="label">
+            <label>Fulfillment by Amazon</label>
+            <tab>webtex</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>20</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <fba_common translate="label">
+                    <label>Common Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>30</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                        <test_mode translate="label comment">
+                            <label>Enable test mode</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </test_mode>
+                        <autosend translate="label comment">
+                            <label>Autosend Mode</label>
+                            <frontend_type>select</frontend_type>
+                            <comment>When should we match your orders against fulfillment rules?</comment>
+                            <source_model>wford/config_mode</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </autosend>
+                    </fields>
+                </fba_common>
+                <fba_crontasks translate="label">
+                    <label>Cron Tasks Frequency Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>30</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                        <check_order translate="label comment">
+                            <label>Check orders changes</label>
+                            <frontend_type>select</frontend_type>
+                            <comment>None - manual check</comment>
+                            <backend_model>wfcom/config_cron_backend_order</backend_model>
+                            <source_model>wfcom/config_cron_source_frequency</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </check_order>
+                        <check_inventory translate="label comment">
+                            <label>Check inventory changes</label>
+                            <comment>None - manual check</comment>
+                            <frontend_type>select</frontend_type>
+                            <backend_model>wfcom/config_cron_backend_inventory</backend_model>
+                            <source_model>wfcom/config_cron_source_frequency</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </check_inventory>
+                        <clean_jobs translate="label comment">
+                            <label>Clean DONE jobs from queue</label>
+                            <comment>None - never</comment>
+                            <frontend_type>select</frontend_type>
+                            <backend_model>wfcom/config_cron_backend_jobs</backend_model>
+                            <source_model>wfcom/config_cron_source_frequency</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </clean_jobs>
+                        <clean_stock translate="label comment">
+                            <label>Clean unlinked stock records</label>
+                            <comment>None - never</comment>
+                            <frontend_type>select</frontend_type>
+                            <backend_model>wfcom/config_cron_backend_stock</backend_model>
+                            <source_model>wfcom/config_cron_source_frequency</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </clean_stock>
+                        <send_queue translate="label comment">
+                            <label>Send Queue Frequency</label>
+                            <frontend_type>select</frontend_type>
+                            <backend_model>wfcom/config_cron_backend_queue</backend_model>
+                            <source_model>wfcom/config_cron_source_queue_frequency</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </send_queue>
+                    </fields>
+                </fba_crontasks>
+            </groups>
+        </fba>
+    </sections>
+</config>
+

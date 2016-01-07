@@ -1,0 +1,28 @@
+<config>
+    <modules>
+        <Bekommerce_Product>
+            <version>0.1.0</version>
+        </Bekommerce_Product>
+    </modules>
+    <global>
+        <blocks>
+           <Bekommerce_Product>
+                <class>Bekommerce_Product_Block</class>
+            </Bekommerce_Product>
+        </blocks>  
+        <helpers>
+            <Bekommerce_Product>
+                <class>Bekommerce_Product_Helper</class>
+            </Bekommerce_Product>
+        </helpers>      
+    </global>
+    <frontend>
+        <layout>
+           <updates>
+                <Product>
+                    <file>listproduct.xml</file>
+                </Product>
+            </updates>
+        </layout>
+    </frontend>        
+</config>

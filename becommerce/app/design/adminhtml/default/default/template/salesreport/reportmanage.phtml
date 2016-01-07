@@ -1,0 +1,401 @@
+<?php 
+	$to="";
+	$from="";
+	$show_order_statuses = 0;
+	$orserstatus = "";
+	
+	$result_order = 0;
+	
+	if(!empty($_REQUEST['from']) && !empty($_REQUEST['to'])){
+		/*====================== Start Code for Magento Orders Product =====================*/
+		//echo "<pre>";
+		$orders_row = array();
+		
+		$to=$_REQUEST['to'];
+		$from=$_REQUEST['from'];
+	
+		$to_date = date('Y-m-d' . ' 23:59:59', strtotime($to));
+		$from_date = date('Y-m-d' . ' 00:00:00', strtotime($from));
+		
+		
+		if($_REQUEST['show_order_statuses']>0){
+			$orserstatus = $_REQUEST['order_statuses'];
+			//print_r($orserstatus);
+			//exit;
+			$orders = Mage::getResourceModel('sales/order_collection')
+                ->addAttributeToSelect('*')
+                ->addFieldToFilter('created_at', array('from'=>$from_date, 'to'=>$to_date))
+				->addFieldToFilter('status', $orserstatus)
+                ->load();
+		}else{
+			$orders = Mage::getResourceModel('sales/order_collection')
+                ->addAttributeToSelect('*')
+                ->addFieldToFilter('created_at', array('from'=>$from_date, 'to'=>$to_date))
+                ->load();
+		}
+		
+
+		
+		$show_order_statuses=$_REQUEST['show_order_statuses'];
+		
+		$result_order = $orders->count();
+        //Mage::log('total orders: ' . $result_order, null, 'salesreport.log');	
+
+		$i=0;
+		foreach($orders as $key=>$single_order) {
+			//print_r($single_order);
+			//exit;
+			$thisId = $single_order->getId();
+			$myOrder=Mage::getModel('sales/order');
+			$myOrder->load($thisId);
+			
+			//Some random fields
+			$reportaddress = Mage::helper('salesreport')->getReportAddress();
+			if($reportaddress=="billing"){
+								
+				$country_id = utf8_decode($myOrder->getBillingAddress()->getCountryId());
+				$country = Mage::getModel('directory/country')->load($country_id)->getName();
+				
+				$name = utf8_decode($myOrder->getBillingAddress()->getFirstname()." ".$myOrder->getBillingAddress()->getLastname());
+				
+				$billingaddress = $myOrder->getBillingAddress()->getStreet();
+				$address = utf8_decode($billingaddress[0]).", ".utf8_decode($billingaddress[1]);
+				
+				$city=utf8_decode($myOrder->getBillingAddress()->getCity());
+				
+				$region=utf8_decode($myOrder->getBillingAddress()->getRegion());
+				
+				$postcode =utf8_decode($myOrder->getBillingAddress()->getPostcode());
+				
+			}else{
+				
+				$country_id = utf8_decode($myOrder->getShippingAddress()->getCountryId());
+				$country = Mage::getModel('directory/country')->load($country_id)->getName();
+				
+				$name = utf8_decode($myOrder->getShippingAddress()->getFirstname()." ".$myOrder->getShippingAddress()->getLastname());
+				
+				$billingaddress = $myOrder->getShippingAddress()->getStreet();
+				$address = utf8_decode($billingaddress[0]).", ".utf8_decode($billingaddress[1]);
+				
+				$city=utf8_decode($myOrder->getShippingAddress()->getCity());
+				
+				$region=utf8_decode($myOrder->getShippingAddress()->getRegion());
+				
+				$postcode =utf8_decode($myOrder->getShippingAddress()->getPostcode());
+			}
+			
+			$myOrder->loadByIncrementId($myOrder->getIncrementId());
+			//$payment_method = $myOrder->getPayment()->getMethodInstance()->getTitle();
+			//$store = Mage::app()->getStore(); 
+			//$orders=Mage::getModel('sales/mysql4_order_collection');						
+			//$allIds=$orders->getAllIds();
+			//$order = Mage::getModel('sales/order')->load($thisId);
+			
+			
+			$items = $myOrder->getItemsCollection();
+			//$items = $myOrder->getAllItems();
+			$ic=1;
+			$countitems=0;
+			//Mage::log('order: ' . $myOrder->getIncrementId(), null, 'salesreport.log');	
+			
+			//Mage::log('order total items: ' . sizeof($items), null, 'salesreport.log');	
+
+			$item_line="";
+			foreach ($items as $itemId => $item){
+				
+				if($item->getQtyToInvoice()!=0):
+					$itemorderqty = $item->getQtyToInvoice();
+				else:
+					$itemorderqty = round($item->getQtyOrdered());
+				endif;
+				
+				//Order Current Item
+				//$_helper = Mage::helper('catalog/output');
+				//$_product = Mage::getModel('catalog/product')->load($item->getProductId());
+							
+				if($item->getParentItemId() && round($item->getOriginalPrice())==0){
+					$parentitem = $myOrder->getItemById($item->getParentItemId());
+					//print_r($item->getData());
+					//print_r($parentitem->getData());
+					//exit;
+					$originalprice = $parentitem->getOriginalPrice();
+					
+					$subtotal = ($parentitem->getOriginalPrice()*$itemorderqty);
+					
+					$discountamount=0;				
+					if(round($parentitem->getDiscountAmount())!=0){
+						$discountamount=$parentitem->getDiscountAmount();
+						$subtotal=($subtotal-$discountamount);
+					}
+					
+					$subtotal = number_format($subtotal,2);
+					
+					$eachitemdiscountamount = ($discountamount/$itemorderqty);
+					$discountamount = number_format($eachitemdiscountamount,2);
+					
+					$taxpercent = $parentitem->getTaxPercent();
+					
+					$eachitemvat = $vatamount_eachproduct/$itemorderqty;														
+					$totalvatdisamount = $eachitemvat+$eachitemdiscountamount;							
+					$net_price = round($originalprice-($totalvatdisamount),2);
+										
+				}else{						
+					$originalprice = $item->getOriginalPrice();
+					
+					$subtotal = ($item->getOriginalPrice()*$itemorderqty);
+					
+					$discountamount=0;				
+					if(round($item->getDiscountAmount())!=0){
+						$discountamount=$item->getDiscountAmount();
+						$subtotal=($subtotal-$discountamount);
+					}
+					
+					$subtotal = number_format($subtotal,2);
+					
+					$eachitemdiscountamount = ($discountamount/$itemorderqty);
+					$discountamount = number_format($eachitemdiscountamount,2);
+					
+					$taxpercent = $item->getTaxPercent();
+					
+					$eachitemvat = $vatamount_eachproduct/$itemorderqty;														
+					$totalvatdisamount = $eachitemvat+$eachitemdiscountamount;							
+					$net_price = round($originalprice-($totalvatdisamount),2);
+					
+				}
+				
+				/*echo $originalprice."<br />";
+				echo $discountamount."<br />";
+				echo $subtotal;
+				exit;*/
+								
+				$customer_email = "";
+				if($custoer_id = $myOrder->getCustomerId()){
+					$customer = Mage::getModel('customer/customer')->load($custoer_id);
+					$customer_email = $customer->getEmail();
+				}
+				
+				if(empty($customer_email)){
+					$customer_email=$myOrder->getCustomerEmail();
+				}
+				
+				//$orders_row[] = array(date("d/m/Y",strtotime($myOrder->getCreatedAt())), $myOrder->getIncrementId(), utf8_decode($item->getName()), $itemorderqty, utf8_decode($net_price),$subtotal,$name,$customer_email,$address,$city,$region,$postcode,$country);
+                
+                //TODO revisar cuando el producto no es compuesto
+				if ($item->getParentItemId()) {
+                   $orders_row[] = array(date("d/m/Y",strtotime($myOrder->getCreatedAt())), $myOrder->getIncrementId(), $item->getSku(), utf8_decode($item->getName()), $itemorderqty, utf8_decode($net_price),$subtotal,$name,$customer_email,$address,$city,$region,$postcode,$country);
+				}
+			
+			}
+		}
+	}
+	
+?>
+
+<div id="anchor-content" class="middle">
+  <div id="page:main-container">
+    <div class="content-header">
+      <table cellspacing="0">
+        <tbody>
+          <tr>
+            <td style="width:50%;"><h3 class="icon-head head-report-sales-sales"><?php echo $this->__("Custom Sales Order Report");?></h3></td>
+            <td class="form-buttons"><button style="" onclick="filterFormSubmit.submit()" class="scalable " type="button" id="id_<?php echo Mage::getSingleton('core/session')->getFormKey() ?>"><span>Show Report</span></button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <div class="entry-edit">
+        <form method="get" action="<?php echo Mage::helper('core/url')->getCurrentUrl();?>" id="filter_form">
+          <?php /*?><input name="form_key" type="hidden" value="<?php echo Mage::getSingleton('core/session')->getFormKey() ?>" /><?php */?>
+          <div class="entry-edit-head">
+            <h4 class="icon-head head-edit-form fieldset-legend">Filter</h4>
+            <div class="form-buttons"></div>
+          </div>
+          <div id="sales_report_base_fieldset" class="fieldset">
+            <div class="hor-scroll">
+              <table cellspacing="0" class="form-list">
+                <tbody>
+                  <tr>
+                    <td class="label"><label for="sales_report_from">From <span class="required">*</span></label></td>
+                    <td class="value"><input type="text" style="width:110px !important;" class=" required-entry input-text" title="From" value="<?php echo $from; ?>" id="sales_report_from" name="from" />
+                      <img style="" title="Select Date" id="sales_report_from_trig" class="v-middle" alt="" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB);?>skin/adminhtml/default/default/images/grid-cal.gif"> 
+                      <script type="text/javascript">
+            //<![CDATA[
+                Calendar.setup({
+                    inputField: "sales_report_from",
+                    ifFormat: "%m/%e/%y",
+                    showsTime: false,
+                    button: "sales_report_from_trig",
+                    align: "Bl",
+                    singleClick : true
+                });
+            //]]>
+            </script></td>
+                  </tr>
+                  <tr>
+                    <td class="label"><label for="sales_report_to">To <span class="required">*</span></label></td>
+                    <td class="value"><input type="text" style="width:110px !important;" class=" required-entry input-text" title="To" value="<?php echo $to; ?>" id="sales_report_to" name="to" />
+                      <img style="" title="Select Date" id="sales_report_to_trig" class="v-middle" alt="" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB);?>skin/adminhtml/default/default/images/grid-cal.gif"> 
+                      <script type="text/javascript">
+						//<![CDATA[
+							Calendar.setup({
+								inputField: "sales_report_to",
+								ifFormat: "%m/%e/%y",
+								showsTime: false,
+								button: "sales_report_to_trig",
+								align: "Bl",
+								singleClick : true
+							});
+						//]]>
+            		</script></td>
+                  </tr>
+                  <tr>
+                    <td class="label"><label for="sales_report_show_order_statuses">Order Status</label></td>
+                    <td class="value"><select class=" select" name="show_order_statuses" id="sales_report_show_order_statuses">
+                        <option <?php echo ($show_order_statuses==0)?'selected="selected"':''; ?> value="0">Any</option>
+                        <option <?php echo ($show_order_statuses==1)?'selected="selected"':''; ?> value="1">Specified</option>
+                      </select>
+                      <p id="note_show_order_statuses" class="note"><span>Applies to Any of the Specified Order Statuses</span></p></td>
+                  </tr>
+                  <tr id="" style="display: none;">
+                    <td class="label"></td>
+                    <td class="value">
+                      <select multiple="multiple" class=" select multiselect" size="10" name="order_statuses[]" id="sales_report_order_statuses">
+                        <option <?php if(in_array('pending',$orserstatus)){echo 'selected="selected"';}?> value="pending">Pending</option>
+                        <option <?php if(in_array('processing',$orserstatus)){echo 'selected="selected"';}?> value="processing">Processing</option>
+                        <option <?php if(in_array('holded',$orserstatus)){echo 'selected="selected"';}?> value="holded">On Hold</option>
+                        <option <?php if(in_array('complete',$orserstatus)){echo 'selected="selected"';}?> value="complete">Complete</option>
+                        <option <?php if(in_array('closed',$orserstatus)){echo 'selected="selected"';}?> value="closed">Closed</option>
+                        <option <?php if(in_array('canceled',$orserstatus)){echo 'selected="selected"';}?> value="canceled">Canceled</option>
+                        <option <?php if(in_array('fraud',$orserstatus)){echo 'selected="selected"';}?> value="fraud">Suspected Fraud</option>
+                        <option <?php if(in_array('payment_review',$orserstatus)){echo 'selected="selected"';}?> value="payment_review">Payment Review</option>
+                      </select></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </form>
+      </div>
+      <script type="text/javascript">
+       	 //<![CDATA[
+        	var filterFormSubmit  = new varienForm('filter_form');
+         //]]>
+        </script> 
+      <script type="text/javascript"> new FormElementDependenceController({"sales_report_order_statuses":{"sales_report_show_order_statuses":"1"}}); </script> 
+    </div>
+    
+    <div>
+    <?php if($result_order>0){?>
+      <table cellspacing="0" class="actions">
+        <tbody>
+          <tr>
+            <td class="pager">&nbsp;</td>
+            <td class="export a-right">
+            	<form method="post" action="<?php echo $this->getUrl('*/*/exportCsv')?>" id="csv_form">
+                	<input name="form_key" type="hidden" value="<?php echo Mage::getSingleton('core/session')->getFormKey() ?>" />
+                	<input type="hidden" value="<?php echo $from; ?>" id="sales_report_from" name="from" />
+                    <input type="hidden" value="<?php echo $to; ?>" id="sales_report_to" name="to" />
+                    <select name="show_order_statuses" style="display:none;">
+                        <option <?php echo ($show_order_statuses==0)?'selected="selected"':''; ?> value="0">Any</option>
+                        <option <?php echo ($show_order_statuses==1)?'selected="selected"':''; ?> value="1">Specified</option>
+                    </select>
+                    
+                    <select multiple="multiple" name="order_statuses[]" style="display:none;">
+                        <option <?php if(in_array('pending',$orserstatus)){echo 'selected="selected"';}?> value="pending">Pending</option>
+                        <option <?php if(in_array('processing',$orserstatus)){echo 'selected="selected"';}?> value="processing">Processing</option>
+                        <option <?php if(in_array('holded',$orserstatus)){echo 'selected="selected"';}?> value="holded">On Hold</option>
+                        <option <?php if(in_array('complete',$orserstatus)){echo 'selected="selected"';}?> value="complete">Complete</option>
+                        <option <?php if(in_array('closed',$orserstatus)){echo 'selected="selected"';}?> value="closed">Closed</option>
+                        <option <?php if(in_array('canceled',$orserstatus)){echo 'selected="selected"';}?> value="canceled">Canceled</option>
+                        <option <?php if(in_array('fraud',$orserstatus)){echo 'selected="selected"';}?> value="fraud">Suspected Fraud</option>
+                        <option <?php if(in_array('payment_review',$orserstatus)){echo 'selected="selected"';}?> value="payment_review">Payment Review</option>
+                    </select>
+                        
+                </form>
+                <script type="text/javascript">
+				 //<![CDATA[
+					var csvFormSubmit  = new varienForm('csv_form');
+				 //]]>
+				</script> 
+            </td>
+            <td class="filter-actions a-right">
+              <img class="v-middle" alt="" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB);?>skin/adminhtml/default/default/images/icon_export.gif">&nbsp; Export to:
+              <select style="width:8em;" id="sales_order_grid_export" name="sales_order_grid_export">
+                <option value="<?php echo $this->getUrl('*/*/exportCsv')?>">CSV</option>
+              </select>
+              <button onclick="csvFormSubmit.submit()" class="scalable task" type="button"><span>Export</span></button>
+              
+              <?php /*?><button onclick="printResult()" class="scalable task" type="button"><span>Print</span></button><?php */?>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    <?php } ?>  
+      <div id="id_<?php echo Mage::getSingleton('core/session')->getFormKey() ?>" class="print_<?php echo Mage::getSingleton('core/session')->getFormKey() ?>">
+        <div class="grid">
+          <div class="hor-scroll">
+            <table cellspacing="0" id="id_<?php echo Mage::getSingleton('core/session')->getFormKey() ?>_table" class="data">
+              <colgroup>
+              <col>
+              <col>
+              <col>
+              <col>
+              <col>
+              <col>
+              <col>
+              <col>
+              <col>
+              <col>
+              <col>
+              <col>
+              <col>
+              <col>
+              </colgroup>
+              <thead>
+                <tr class="headings">
+                  <th class=" no-link"><span class="nobr">Period</span></th>
+                  <th class=" no-link"><span class="nobr">Order Id</span></th>
+                  <th class=" no-link"><span class="nobr">SKU</span></th>
+                  <th class=" no-link"><span class="nobr">Item Name</span></th>
+                  <th class=" no-link"><span class="nobr">Qty</span></th>
+                  <th class=" no-link"><span class="nobr">Unit Price</span></th>
+                  <th class=" no-link"><span class="nobr">Row Total</span></th>
+                  <th class=" no-link"><span class="nobr"><?php echo ($reportaddress=="billing")?"Billing":"Shipping"; ?> Name</span></th>
+                  <th class=" no-link"><span class="nobr">Email</span></th>
+                  <th class=" no-link"><span class="nobr">Street Address</span></th>
+                  <th class=" no-link"><span class="nobr">City</span></th>
+                  <th class=" no-link"><span class="nobr">State</span></th>
+                  <th class=" no-link"><span class="nobr">Postcode</span></th>
+                  <th class=" no-link"><span class="nobr">Country</span></th>
+                </tr>
+              </thead>
+              <tbody id="">
+                <?php
+                if(count($orders_row)>0){
+					foreach($orders_row as $singlerows){
+						if(!empty($singlerows)){
+							echo "<tr>";
+							foreach($singlerows as $value){
+				?>
+              <td><?php echo $value;?></td>
+                <?php
+							}
+							echo "</tr>";
+						}
+					}
+				}else{
+				?>
+              <tr class="even">
+                <td colspan="14" class="empty-text a-center">No records found.</td>
+              </tr>
+              <?php } ?>
+                </tbody>
+              
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

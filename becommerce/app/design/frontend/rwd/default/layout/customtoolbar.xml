@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+    </default>
+    <customtoolbar_index_index>
+        <reference name="content">
+            <block type="customtoolbar/customtoolbar" name="customtoolbar" template="customtoolbar/customtoolbar.phtml" />
+        </reference>
+    </customtoolbar_index_index>
+    <catalog_category_default>
+        <reference name="product_list_toolbar">
+            <action method="setTemplate"><template>customtoolbar/toolbar.phtml</template></action>
+        </reference>
+    </catalog_category_default>
+    
+    <catalog_category_layered>
+        <reference name="product_list_toolbar">
+            <action method="setTemplate"><template>customtoolbar/toolbar.phtml</template></action>
+        </reference>
+    </catalog_category_layered>
+
+    <catalogsearch_result_index>
+        <reference name="product_list_toolbar">
+            <action method="setTemplate"><template>customtoolbar/toolbar.phtml</template></action>
+        </reference>
+    </catalogsearch_result_index>
+</layout> 

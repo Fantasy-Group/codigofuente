@@ -1,0 +1,199 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to suporte.developer@buscape-inc.com so we can send you a copy immediately.
+ *
+ * @category   design_default
+ * @package    Mage
+ * @copyright  Copyright (c) 2010 Buscapé Company (http://www.buscapecompany.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+?>
+
+<?php 
+    $typeIntegration = Mage::getModel('payulatam/config')->getTypeIntegration();
+    
+    if($typeIntegration == 'TR'){
+?>
+<div class="page-head">
+    <h2 class="sub-title">Finalizando sua compra com PayU Latam</h2>
+</div>
+
+<?php $typeCheckout = Mage::getModel('payulatam/config')->getTypeCheckout();  ?>
+
+<?php 
+    switch($typeCheckout) 
+    { 
+        case "LIGHTBOX":
+?>            
+        <script type="text/javascript">
+            var div_pd = document.createElement("div");
+            var center_frame = document.createElement("center");
+            var div_frame = document.createElement("div");
+            var img_close = document.createElement("img");
+            var frame_pd = document.createElement("iframe");
+
+            frame_pd.setAttribute("style","border:0px");
+            frame_pd.setAttribute("width","100%");
+            frame_pd.setAttribute("height","700");
+            frame_pd.setAttribute("name","pd_frame");
+
+            img_close.setAttribute("style","position: relative;margin-left: 99%;margin-top: -20px;");
+            img_close.setAttribute("src","<?php echo $this->getSkinUrl('buscape/payulatam/images/close.png'); ?>");
+
+            div_frame.setAttribute("style","padding: 10px;background-color: #fff;width: 90%;margin-top: 50px");
+            div_frame.setAttribute("id","lightbox-payu");
+
+            div_pd.setAttribute("id","overlay-pd");
+
+            div_frame.appendChild(img_close);
+            div_frame.appendChild(frame_pd);
+
+            center_frame.appendChild(div_frame);
+
+            div_pd.appendChild(center_frame);
+
+            document.body.appendChild(div_pd);
+        </script>
+        
+        <table style="width:100%;">
+            <tr>
+                <td style="width:100%">
+                    Sua compra est&aacute; em processo de finaliza&ccedil;&atilde;o.<br />
+                    Caso a p&aacute;gina de finaliza&ccedil;&atilde;o de pagamento n&atilde;o se inicie automaticamente, <a href="#" id="pd_lightbox">Clique Aqui</a>
+                    <br />
+                    <br />
+                    <?php  $this->getPayment(); ?>
+                </td>
+            </tr>
+        </table>
+
+        <script type="text/javascript">
+            document.getElementById('pd_form').setAttribute("target", "pd_frame");
+            document.getElementById('pd_form').submit();
+            document.getElementById('overlay-pd').onclick = function (){
+                this.style.display = "none";
+            };
+            document.getElementById('pd_lightbox').onclick = function (){
+                document.getElementById('overlay-pd').style.display = "block";
+            };
+        </script>
+<?php
+            break;
+        case "FRAME":
+?>
+        <table style="width:100%;">
+            <tr>
+                <td style="width:100%">
+                    Sua compra est&aacute; em processo de finaliza&ccedil;&atilde;o.
+                    <br />
+                    <br />                    
+                    <iframe name="pd_frame" width="100%" height="900" style="border:0px; overflow-x:hidden" ></iframe>
+                    <?php  $this->getPayment(); ?>
+                </td>
+            </tr>
+        </table>
+
+        <script type="text/javascript">
+            document.getElementById('pd_form').setAttribute("target", "pd_frame");
+            document.getElementById('pd_form').submit();
+        </script>        
+<?php
+            break;
+        case "REDIRECT":
+?>
+        <table style="width:100%;">
+            <tr>
+                <td style="width:100%">
+                    Sua compra est&aacute; em processo de finaliza&ccedil;&atilde;o.<br />
+                    Você será redirecionado para a PayU Latam. Caso a p&aacute;gina de finaliza&ccedil;&atilde;o de pagamento n&atilde;o se inicie automaticamente, <a href="#" id="pd_lightbox">Clique Aqui</a>
+                    <br />
+                    <br />
+                    <?php  $this->getPayment(); ?>
+                </td>
+            </tr>
+        </table>
+
+        <script type="text/javascript">
+            document.getElementById('pd_form').setAttribute("target", "pd_frame");
+            document.getElementById('pd_form').submit();
+            document.getElementById('pd_lightbox').onclick = function (){
+                document.getElementById('pd_form').submit();
+            };
+        </script>        
+<?php        
+            break;
+        default:
+?>
+        <table style="width:100%;">
+            <tr>
+                <td style="width:100%">
+                    Sua compra est&aacute; em processo de finaliza&ccedil;&atilde;o.<br />
+                    Você será redirecionado para a PayU Latam. Caso a p&aacute;gina de finaliza&ccedil;&atilde;o de pagamento n&atilde;o se inicie automaticamente, <a href="#" id="pd_lightbox">Clique Aqui</a>
+                    <br />
+                    <br />
+                    <?php  $this->getPayment(); ?>
+                </td>
+            </tr>
+        </table>
+
+        <script type="text/javascript">
+            document.getElementById('pd_form').setAttribute("target", "pd_frame");
+            document.getElementById('pd_form').submit();
+            document.getElementById('pd_lightbox').onclick = function (){
+                document.getElementById('pd_form').submit();
+            };
+        </script>     
+<?php        
+            break;
+       }
+    }elseif($typeIntegration == 'WS'){
+?>
+<div class="page-head">
+    <h2 class="sub-title"><?php echo $this->__('Seu pedido foi finalizado com sucesso!!!') ?></h2>
+    <table style="width:100%;">
+        <tr>
+            <td style="width:100%">
+                <?php  $responseRequest = $this->getPaymentApi(); ?>                
+                <p><?php echo $this->__('O número do pedido é #: %s.', $responseRequest["referenceCode"]) ?></p>
+                <?php
+                    
+                    $paymentMethod = "";
+                    
+                    switch($responseRequest["paymentMethod"]){
+                        case "ELO" : $paymentMethod = "Cart&atilde;o de Cr&eacute;dito Elo"; break;
+                        case "MASTERCARD" : $paymentMethod = "Cart&atilde;o de Cr&eacute;dito Mastercard"; break;
+                        case "AMEX" : $paymentMethod = "Cart&atilde;o de Cr&eacute;dito American Express"; break;
+                        case "DINERS" : $paymentMethod = "Cart&atilde;o de Cr&eacute;dito Diners Club"; break;
+                        case "VISA" : $paymentMethod = "Cart&atilde;o de Cr&eacute;dito Visa"; break;
+                        case "BOLETO_BANCARIO" : $paymentMethod = "Boleto Banc&aacute;rio"; break;
+                    }
+                ?>
+                <p><?php echo $this->__('Seu pedido foi finalizado na PayU Latam por %s.', $paymentMethod) ?></p>
+                
+                <?php
+                    if($responseRequest["paymentMethod"] == "BOLETO_BANCARIO"){
+                ?>
+                <p><?php echo $this->__('<a href="%s" onclick="this.target=\'_blank\'"><img src="'.$this->getSkinUrl('buscape/payulatam/images/botao-imprimir-boleto.png').'" /></a>', $responseRequest["url_boleto_bancario"]) ?></p>
+                <?php
+                    }
+                ?>
+                <p><?php echo $this->__('You will receive an order confirmation email with details of your order and a link to track its progress.') ?></p>
+                
+            </td>
+        </tr>
+    </table>
+</div>
+<?php
+    }
+    
+?>

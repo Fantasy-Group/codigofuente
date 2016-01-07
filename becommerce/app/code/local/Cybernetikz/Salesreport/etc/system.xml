@@ -1,0 +1,44 @@
+<config>
+	<sections>
+        <salesreports translate="label" module="salesreport">
+            <label>Custom Sales Report</label>
+            <tab>sales</tab>
+            <sort_order>500</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+ 			
+            <groups>
+				<reportsetting translate="label" module="salesreport">
+					<label>Report Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+					<fields>
+						<report_name translate="label">
+                            <label>Report File Name</label>
+                            <frontend_type>text</frontend_type>
+							<comment>Please enter report file name. Please don't include file extension i.e .csv. Example: SalesReport</comment>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </report_name>
+						<report_address translate="label">
+                            <label>Report Use Address</label>
+                            <frontend_type>select</frontend_type>
+							<source_model>salesreport/address</source_model>
+							<comment>Please select order address you want to use in your report.</comment>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </report_address>
+					</fields>
+				</reportsetting>
+            </groups>
+        </salesreports>
+    </sections>
+</config>

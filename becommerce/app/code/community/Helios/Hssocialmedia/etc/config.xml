@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<config>
+	<default>
+	<hsmedia>
+		<hsmediashare>			
+			<facebooktitle>Follow via Facebook</facebooktitle>			
+			<linkedintitle>Follow via Linkedin</linkedintitle>
+			<twittertitle>Follow via Twitter</twittertitle>
+			<youtubetitle>Follow via Youtube</youtubetitle>
+			<googleplustitle>Follow via Google +</googleplustitle>
+			<pinteresttitle>Follow via Pinterest</pinteresttitle>
+            <instagramtitle>Follow via Instagram</instagramtitle>
+            <flickrtitle>Follow via Flickr</flickrtitle>
+            <webtitle>Go To</webtitle>
+            <webmailtitle>Mail To</webmailtitle>
+		</hsmediashare>
+	</hsmedia>
+	</default>
+  <modules>
+    <Helios_Hssocialmedia>
+      <version>0.2.3</version>
+    </Helios_Hssocialmedia>
+  </modules>
+  <frontend>
+    <routers>
+      <hssocialmedia>
+        <use>standard</use>
+          <args>
+            <module>Helios_Hssocialmedia</module>
+            <frontName>hssocialmedia</frontName>
+          </args>
+      </hssocialmedia>
+    </routers>
+		<layout>
+		  <updates>
+			<hssocialmedia>
+			  <file>hssocialmedia.xml</file>
+			</hssocialmedia>
+		  </updates>
+		</layout>
+  </frontend>
+  <global>
+    <helpers>
+      <hssocialmedia>
+        <class>Helios_Hssocialmedia_Helper</class>
+      </hssocialmedia>
+    </helpers>
+	<blocks>
+	  <hssocialmedia>
+		<class>Helios_Hssocialmedia_Block</class>
+	  </hssocialmedia>
+	</blocks>
+  </global>
+</config> 

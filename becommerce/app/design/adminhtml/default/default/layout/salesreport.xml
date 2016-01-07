@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<layout>
+	<salesreport_adminhtml_sales_reportmanage>
+        <update handle="salesreport_sales_reportmanage"/>
+        <reference name="content">
+            <block type="adminhtml/template" name="sales" template="salesreport/reportmanage.phtml"/>
+        </reference>
+    </salesreport_adminhtml_sales_reportmanage>
+</layout>

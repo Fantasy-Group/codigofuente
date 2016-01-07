@@ -1,0 +1,178 @@
+title:MAGMI by dweeves - version:0.7.18
+startup:Running Magmi Product Import Engine v1.7.1 by dweeves
+startup:Import Profile:default
+startup:Import Mode:create
+step:step:0.5%
+plugin;Magmi_CSVDataSource;pluginhello:CSV Datasource-1.3-Dweeves- 
+plugin;Magmi_OptimizerPlugin;pluginhello:Magmi Optimizer-1.0.5-Dweeves-http://sourceforge.net/apps/mediawiki/magmi/index.php?title=Magmi_Optimizer 
+plugin;Magmi_ReindexingPlugin;pluginhello:Magmi Magento Reindexer-1.0.2-Dweeves-http://sourceforge.net/apps/mediawiki/magmi/index.php?title=Magmi_Magento_Reindexer 
+plugin;CategoryImporter;pluginhello:On the fly category creator/importer-0.2.3-Dweeves-http://sourceforge.net/apps/mediawiki/magmi/index.php?title=On_the_fly_category_creator/importer 
+plugin;ImageAttributeItemProcessor;pluginhello:Image attributes processor-1.0.25-Dweeves-http://sourceforge.net/apps/mediawiki/magmi/index.php?title=Image_attributes_processor 
+plugin;ItemIndexer;pluginhello:On the fly indexer-0.1.5-Dweeves-http://sourceforge.net/apps/mediawiki/magmi/index.php?title=On_the_fly_indexer 
+plugin;CustomOptionsItemProcessor;pluginhello:Custom Options-0.0.7-Pablo & Dweeves-http://sourceforge.net/apps/mediawiki/magmi/index.php?title=Custom_Options 
+plugin;ValueTrimItemProcessor;pluginhello:Value Trimmer for select/multiselect-0.0.3-Dweeves-http://sourceforge.net/apps/mediawiki/magmi/index.php?title=Value_Trimmer_for_select/multiselect 
+plugin;Magmi_ConfigurableItemProcessor;pluginhello:Configurable Item processor-1.3.7-Dweeves-http://sourceforge.net/apps/mediawiki/magmi/index.php?title=Configurable_Item_processor 
+plugin;Magmi_DefaultAttributeItemProcessor;pluginhello:Standard Attribute Import-1.0.5-Dweeves- 
+plugin;Magmi_CSVDataSource;startup:CSV Datasource v1.3 - Importing CSV : /var/www/html/becommerce/var/import/MALIMAGENTO.csv using separator [ , ] enclosing [ " ]
+plugin;Magmi_OptimizerPlugin;info:Magmi Optimizer v1.0.5 - Optimizing magmi
+plugin;Magmi_OptimizerPlugin;info:Magmi Optimizer v1.0.5 - Adding index MAGMI_EAOV_OPTIMIZATION_IDX on eav_attribute_option_value
+plugin;Magmi_OptimizerPlugin;info:Magmi Optimizer v1.0.5 - Already optmized!
+plugin;Magmi_OptimizerPlugin;info:Magmi Optimizer v1.0.5 - Adding index MAGMI_CPEM_OPTIMIZATION_IDX on catalog_product_entity_media_gallery
+plugin;Magmi_OptimizerPlugin;info:Magmi Optimizer v1.0.5 - Already optmized!
+plugin;Magmi_OptimizerPlugin;info:Magmi Optimizer v1.0.5 - Adding index MAGMI_CCEV_OPTIMIZATION_IDX on catalog_category_entity_varchar
+plugin;Magmi_OptimizerPlugin;info:Magmi Optimizer v1.0.5 - Already optmized!
+plugin;Magmi_OptimizerPlugin;info:Magmi Optimizer v1.0.5 - Adding index MAGMI_EA_CODE_OPTIMIZATION_IDX on eav_attribute
+plugin;Magmi_OptimizerPlugin;info:Magmi Optimizer v1.0.5 - Already optmized!
+startup:Performing Datasouce Lookup...
+lookup:41:0.0074679851531982
+startup:Found 41 records, took 0.0074679851531982 sec
+plugin;Magmi_CSVDataSource;startup:CSV Datasource v1.3 - No BOM detected, assuming File is UTF8 without BOM...
+plugin;Magmi_CSVDataSource;startup:CSV Datasource v1.3 - 65 CSV headers columns found
+columns:65
+plugin;Magmi_ConfigurableItemProcessor;startup:Configurable Item processor v1.3.7 - no options_container set, defaulting to :Block after product info
+plugin;Magmi_DefaultAttributeItemProcessor;startup:Standard Attribute Import v1.0.5 - Newly created items will have default values for columns:page_layout
+startup:Ajusted processed columns:68
+itime:1 - 0.00022006034851074 - 0.00022006034851074
+dbtime:0 - 0 - 0 - 0
+warning:Invalid category ids found for sku 9054-S-Green Animal Print:
+itime:2 - 0.50641894340515 - 0.50612187385559
+dbtime:62 - 0.021044969558716 - 0.021044969558716 - 62
+warning:Invalid category ids found for sku 9054-M-Green Animal Print:
+itime:3 - 0.79172205924988 - 0.28521609306335
+dbtime:131 - 0.041591644287109 - 0.020546674728394 - 69
+warning:Invalid category ids found for sku 9054-L-Green Animal Print:
+itime:4 - 0.99672794342041 - 0.20491003990173
+dbtime:200 - 0.062807321548462 - 0.021215677261353 - 69
+itime:5 - 1.1511828899384 - 0.15436887741089
+dbtime:278 - 0.087193727493286 - 0.024386405944824 - 78
+warning:Invalid category ids found for sku 9057-S-Purple Floral Print:
+itime:6 - 1.6045908927917 - 0.45327687263489
+dbtime:347 - 0.11227822303772 - 0.025084495544434 - 69
+warning:Invalid category ids found for sku 9057-M-Purple Floral Print:
+itime:7 - 1.8210520744324 - 0.21636319160461
+dbtime:416 - 0.13202142715454 - 0.019743204116821 - 69
+warning:Invalid category ids found for sku 9057-L-Purple Floral Print:
+itime:8 - 2.0894219875336 - 0.2682740688324
+dbtime:485 - 0.15229558944702 - 0.02027416229248 - 69
+warning:Invalid category ids found for sku 9057-XL-Purple Floral Print:
+itime:9 - 2.3015849590302 - 0.21204304695129
+dbtime:554 - 0.17295026779175 - 0.020654678344727 - 69
+plugin;ImageAttributeItemProcessor;warning:Image attributes processor v1.0.25 - error copying media/catalog/product/9/0/9057_fondo_blanco_opcion_menos_fondo.jpg : download error,The requested URL returned error: 500 Internal Server Error
+itime:10 - 2.9274160861969 - 0.62573099136353
+dbtime:625 - 0.19555354118347 - 0.022603273391724 - 71
+warning:Invalid category ids found for sku 9073-S-Red and Green Feather Print:
+itime:11 - 3.2388610839844 - 0.3113420009613
+dbtime:694 - 0.219886302948 - 0.024332761764526 - 69
+warning:Invalid category ids found for sku 9073-M-Red and Green Feather Print:
+itime:12 - 3.4614839553833 - 0.22252702713013
+dbtime:763 - 0.23977828025818 - 0.019891977310181 - 69
+warning:Invalid category ids found for sku 9073-L-Red and Green Feather Print:
+itime:13 - 3.6498711109161 - 0.18826222419739
+dbtime:832 - 0.25966954231262 - 0.019891262054443 - 69
+warning:Invalid category ids found for sku 9073-XL-Red and Green Feather Print:
+itime:14 - 3.8939259052277 - 0.24395680427551
+dbtime:901 - 0.27991819381714 - 0.020248651504517 - 69
+itime:15 - 4.154333114624 - 0.26028609275818
+dbtime:976 - 0.30248308181763 - 0.022564888000488 - 75
+warning:Invalid category ids found for sku 9088-S-Black and Green Python Print:
+itime:16 - 4.5432019233704 - 0.38873100280762
+dbtime:1045 - 0.3274610042572 - 0.024977922439575 - 69
+warning:Invalid category ids found for sku 9088-M-Black and Green Python Print:
+itime:17 - 4.7679560184479 - 0.22465300559998
+dbtime:1114 - 0.34876894950867 - 0.021307945251465 - 69
+warning:Invalid category ids found for sku 9088-L-Black and Green Python Print:
+itime:18 - 4.9164009094238 - 0.1483588218689
+dbtime:1183 - 0.36897349357605 - 0.020204544067383 - 69
+itime:19 - 5.062117099762 - 0.14561915397644
+dbtime:1258 - 0.39093828201294 - 0.02196478843689 - 75
+warning:Invalid category ids found for sku 9089-S-Black and Neon color Block:
+itime:20 - 5.5332980155945 - 0.47107410430908
+dbtime:1327 - 0.41794037818909 - 0.027002096176147 - 69
+warning:Invalid category ids found for sku 9089-M-Black and Neon color Block:
+itime:21 - 5.7868709564209 - 0.25347590446472
+dbtime:1396 - 0.43906950950623 - 0.021129131317139 - 69
+warning:Invalid category ids found for sku 9089-L-Black and Neon color Block:
+itime:22 - 5.9983739852905 - 0.21138191223145
+dbtime:1465 - 0.45952606201172 - 0.020456552505493 - 69
+itime:23 - 6.1880369186401 - 0.189532995224
+dbtime:1540 - 0.48146820068359 - 0.021942138671875 - 75
+warning:Invalid category ids found for sku 9098-S-Blue Sunset Palms Tree :
+itime:24 - 6.612447977066 - 0.42427492141724
+dbtime:1609 - 0.50733923912048 - 0.02587103843689 - 69
+warning:Invalid category ids found for sku 9098-M-Blue Sunset Palms Tree :
+itime:25 - 6.8312880992889 - 0.21874117851257
+dbtime:1678 - 0.52722382545471 - 0.019884586334229 - 69
+warning:Invalid category ids found for sku 9098-L-Blue Sunset Palms Tree :
+itime:26 - 7.1178660392761 - 0.28647804260254
+dbtime:1747 - 0.5476062297821 - 0.020382404327393 - 69
+itime:27 - 7.307853937149 - 0.18989086151123
+dbtime:1822 - 0.5702793598175 - 0.0226731300354 - 75
+warning:Invalid category ids found for sku 9104-S-Blue Polka Dots:
+itime:28 - 7.7738308906555 - 0.46586585044861
+dbtime:1891 - 0.59593629837036 - 0.025656938552856 - 69
+warning:Invalid category ids found for sku 9104-M-Blue Polka Dots:
+itime:29 - 8.0348629951477 - 0.26093506813049
+dbtime:1960 - 0.61656665802002 - 0.020630359649658 - 69
+itime:30 - 8.2126140594482 - 0.17765617370605
+dbtime:2035 - 0.63838291168213 - 0.021816253662109 - 75
+warning:Invalid category ids found for sku 9108-S-Neon Pink Abstract Print:
+itime:31 - 8.6181540489197 - 0.40543103218079
+dbtime:2104 - 0.66273641586304 - 0.024353504180908 - 69
+warning:Invalid category ids found for sku 9108-M-Neon Pink Abstract Print:
+itime:32 - 9.0185990333557 - 0.40034699440002
+dbtime:2173 - 0.68334007263184 - 0.020603656768799 - 69
+warning:Invalid category ids found for sku 9108-L-Neon Pink Abstract Print:
+itime:33 - 9.5711350440979 - 0.55240797996521
+dbtime:2242 - 0.70524477958679 - 0.021904706954956 - 69
+itime:34 - 9.7827770709991 - 0.21155714988708
+dbtime:2317 - 0.74442648887634 - 0.039181709289551 - 75
+warning:Invalid category ids found for sku 9119-S-Black Mesh Triangular:
+itime:35 - 10.291918992996 - 0.50886201858521
+dbtime:2386 - 0.77178359031677 - 0.02735710144043 - 69
+warning:Invalid category ids found for sku 9119-M-Black Mesh Triangular:
+itime:36 - 10.62030005455 - 0.32811713218689
+dbtime:2455 - 0.79315733909607 - 0.021373748779297 - 69
+warning:Invalid category ids found for sku 9119-L-Black Mesh Triangular:
+itime:37 - 10.909818887711 - 0.28927278518677
+dbtime:2524 - 0.82262873649597 - 0.029471397399902 - 69
+itime:38 - 11.157469987869 - 0.2475368976593
+dbtime:2599 - 0.84693098068237 - 0.024302244186401 - 75
+warning:Invalid category ids found for sku 9120-S-Black Mesh Bandeau:
+itime:39 - 11.564528942108 - 0.40679383277893
+dbtime:2668 - 0.87231087684631 - 0.02537989616394 - 69
+warning:Invalid category ids found for sku 9120-M-Black Mesh Bandeau:
+itime:40 - 11.847745895386 - 0.28297591209412
+dbtime:2737 - 0.89382433891296 - 0.02151346206665 - 69
+warning:Invalid category ids found for sku 9120-L-Black Mesh Bandeau:
+itime:41 - 12.064975976944 - 0.21703195571899
+dbtime:2806 - 0.91593074798584 - 0.022106409072876 - 69
+itime:41 - 12.277889966965 - 0.21281886100769
+dbtime:2882 - 0.94174647331238 - 0.025815725326538 - 76
+info:Skus imported OK:41/41
+plugin;Magmi_ReindexingPlugin;info:Magmi Magento Reindexer v1.0.2 - Cleaning flat tables before reindex...
+plugin;Magmi_ReindexingPlugin;info:Magmi Magento Reindexer v1.0.2 - running indexer
+plugin;Magmi_ReindexingPlugin;info:Magmi Magento Reindexer v1.0.2 - Reindexing catalog_product_attribute....
+plugin;Magmi_ReindexingPlugin;info:Magmi Magento Reindexer v1.0.2 - Product Attributes index was rebuilt successfully in 00:00:01<br>
+plugin;Magmi_ReindexingPlugin;info:Magmi Magento Reindexer v1.0.2 - done in 1.81 secs
+plugin;Magmi_ReindexingPlugin;info:Magmi Magento Reindexer v1.0.2 - Reindexing catalog_product_price....
+plugin;Magmi_ReindexingPlugin;info:Magmi Magento Reindexer v1.0.2 - Product Prices index was rebuilt successfully in 00:00:03<br>
+plugin;Magmi_ReindexingPlugin;info:Magmi Magento Reindexer v1.0.2 - done in 3.57 secs
+plugin;Magmi_ReindexingPlugin;info:Magmi Magento Reindexer v1.0.2 - Reindexing catalog_product_flat....
+plugin;Magmi_ReindexingPlugin;info:Magmi Magento Reindexer v1.0.2 - Product Flat Data index was rebuilt successfully in 00:00:18<br>
+plugin;Magmi_ReindexingPlugin;info:Magmi Magento Reindexer v1.0.2 - done in 18.94 secs
+plugin;Magmi_ReindexingPlugin;info:Magmi Magento Reindexer v1.0.2 - Reindexing catalog_category_flat....
+plugin;Magmi_ReindexingPlugin;info:Magmi Magento Reindexer v1.0.2 - Category Flat Data index was rebuilt successfully in 00:00:00<br>
+plugin;Magmi_ReindexingPlugin;info:Magmi Magento Reindexer v1.0.2 - done in 0.5 secs
+plugin;Magmi_ReindexingPlugin;info:Magmi Magento Reindexer v1.0.2 - Reindexing catalog_category_product....
+plugin;Magmi_ReindexingPlugin;info:Magmi Magento Reindexer v1.0.2 - Category Products index was rebuilt successfully in 00:00:00<br>
+plugin;Magmi_ReindexingPlugin;info:Magmi Magento Reindexer v1.0.2 - done in 1.12 secs
+plugin;Magmi_ReindexingPlugin;info:Magmi Magento Reindexer v1.0.2 - Reindexing cataloginventory_stock....
+plugin;Magmi_ReindexingPlugin;info:Magmi Magento Reindexer v1.0.2 - Stock Status index was rebuilt successfully in 00:00:00<br>
+plugin;Magmi_ReindexingPlugin;info:Magmi Magento Reindexer v1.0.2 - done in 0.67 secs
+plugin;Magmi_ReindexingPlugin;info:Magmi Magento Reindexer v1.0.2 - Reindexing catalog_url....
+plugin;Magmi_ReindexingPlugin;info:Magmi Magento Reindexer v1.0.2 - Catalog URL Rewrites index was rebuilt successfully in 00:00:17<br>
+plugin;Magmi_ReindexingPlugin;info:Magmi Magento Reindexer v1.0.2 - done in 17.63 secs
+plugin;Magmi_ReindexingPlugin;info:Magmi Magento Reindexer v1.0.2 - Reindexing catalogsearch_fulltext....
+plugin;Magmi_ReindexingPlugin;info:Magmi Magento Reindexer v1.0.2 - Catalog Search Index index was rebuilt successfully in 00:00:08<br>
+plugin;Magmi_ReindexingPlugin;info:Magmi Magento Reindexer v1.0.2 - done in 9.26 secs
+end:Import Ended

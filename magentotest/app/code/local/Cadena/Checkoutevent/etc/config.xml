@@ -1,0 +1,30 @@
+<config>
+	<modules>
+		<Cadena_Checkoutevent>
+			<version>0.0.1</version>
+		</Cadena_Checkoutevent>
+	</modules>
+	<global>		
+		<models>
+			<checkoutevent>
+				<class>Cadena_Checkoutevent_Model</class>
+			</checkoutevent>
+			
+		</models>
+		
+		<events>
+			<sales_order_save_after>
+				<observers>
+					<checkoutevent>
+						<type>model</type>
+						<class>checkoutevent/observer</class>
+						<method>orderSaveAfter</method>
+					</checkoutevent>
+				</observers>
+			</sales_order_save_after>
+		</events>
+	</global>
+
+
+
+</config>

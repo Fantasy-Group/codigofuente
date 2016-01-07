@@ -1,0 +1,36 @@
+body { background-color: #db6200; background-image: url(../images/body_bg.gif); }
+
+.slogan { background-image: url(../images/slogan.gif); }
+.page-title h1 { color: #db6200; }
+
+.header,
+.nav-container,
+.main-container,
+.main,
+.featured-center,
+.featured-top { background-image: url(../images/container.png); }
+
+.header .form-search { background-image: url(../images/mini_search_bg.gif); }
+.header .form-language label { color:#c3d5e3; }
+
+.header-cart .title { color: #c3d5e3; }
+.header-cart .content { background:#fff3ea; }
+.recently .subtitle { color: #db6200; }
+
+#nav,
+#nav span,
+#nav li.active a,
+.cms-home .nav-home a,
+.contacts-index-index .nav-contacts a,
+.cms-about-magento-demo-store .nav-about a { background-image: url(../images/nav.gif); }
+#nav a { color: #ffc697; }
+
+/*.block-subscribe { background-color: #58822f; background-image: url(../images/base_mini_alt_bg.gif); }*/
+
+.footer-container{ background-image: url(../images/footer_bg.gif); }
+.footer .informational li ul li a { color: #f8e1cf; }
+.footer .informational h6 { color: #f8e1cf; }
+.footer .contacts { border-color: #d56000; }
+.footer .legality a { color: #ffd2ad; }
+
+.featured-products h4 { color:#db6200; }

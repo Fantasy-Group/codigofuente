@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<layout>
+	<default>
+		<remove name="paypal.partner.right.logo" />
+		<remove name="right.permanent.callout" />
+		<remove name="cart_sidebar" />
+		<remove name="checkout.cart.shipping" />
+		<remove name="checkout.cart.coupon" />
+		<remove name="left.permanent.callout" />
+		<remove name="right.reports.product.viewed" />
+		<remove name="left.reports.product.viewed" />
+		<remove name="product.clone_prices" />
+		<remove name="product_tag_list" />
+		<remove name="product.attributes"/>
+		<action method="addItem">
+			<type>skin_js</type>
+			<name>js/jquery.js</name>
+		</action>
+		<action method="addItem">
+			<type>skin_js</type>
+			<name>js/swiper.js</name>
+		</action>
+		<action method="addCss">
+			<stylesheet>css/swiper.css</stylesheet>
+		</action>
+		<!--<reference name="head">
+			<action method="addItem">
+				<type>skin_js</type>
+				<name>js/jquery.js</name>
+			</action>
+			<action method="addItem">
+				<type>skin_js</type>
+				<name>js/script.js</name>
+			</action>
+			<action method="addItem">
+				<type>skin_js</type>
+				<name>js/bundle.js</name>
+			</action>
+			<action method="addItem">
+				<type>skin_js</type>
+				<name>js/giftmessage.js</name>
+			</action>
+			<action method="addItem">
+				<type>skin_js</type>
+				<name>js/ie6.js</name>
+			</action>
+			<action method="addItem">
+				<type>skin_js</type>
+				<name>js/msrp.js</name>
+			</action>
+			<action method="addItem">
+				<type>skin_js</type>
+				<name>js/opcheckout.js</name>
+			</action>
+			<action method="addItem">
+				<type>skin_js</type>
+				<name>js/checkout/review.js</name>
+			</action>
+			<action method="addCss">
+				<stylesheet>css/flexslider.css</stylesheet>
+			</action>
+		</reference>-->
+		<reference name="head">
+                <action method="addJs"><script>lib/jquery/jquery-1.10.2.min.js</script></action>
+                <action method="addJs"><script>lib/jquery/noconflict.js</script></action>
+                <action method="addItem"><type>skin_js</type><name>js/lib/modernizr.custom.min.js</name></action>
+                <action method="addItem"><type>skin_js</type><name>js/lib/selectivizr.js</name></action>
+                <action method="addItem"><type>skin_js</type><name>js/lib/matchMedia.js</name></action>
+                <action method="addItem"><type>skin_js</type><name>js/lib/matchMedia.addListener.js</name></action>
+                <action method="addItem"><type>skin_js</type><name>js/lib/enquire.js</name></action>
+                <action method="addItem"><type>skin_js</type><name>js/app.js</name></action>
+                <action method="addItem"><type>skin_js</type><name>js/lib/jquery.cycle2.min.js</name></action>
+                <action method="addItem"><type>skin_js</type><name>js/lib/jquery.cycle2.swipe.min.js</name></action>
+                <action method="addItem"><type>skin_js</type><name>js/slideshow.js</name></action>
+                <action method="addItem"><type>skin_js</type><name>js/lib/imagesloaded.js</name></action>
+				<action method="addItem"><type>skin_js</type><name>js/minicart.js</name></action>
+		</reference>
+	</default>
+	<catalog_product_view>
+		<reference name="head">
+			<action method="addItem"><type>skin_js</type><script>js/lib/elevatezoom/jquery.elevateZoom-3.0.8.min.js</script></action>
+		</reference>
+		<reference name="product.info.media">
+			<block type="core/text_list" name="product.info.media.after" as="after" />
+		</reference>
+	    <reference name="root">
+	        <action method="setTemplate"><template>page/1column.phtml</template></action>
+	    </reference>
+	</catalog_product_view>
+	<PRODUCT_TYPE_configurable>
+		<reference name="product.info.options.configurable">
+			<block type="core/text_list" name="product.info.options.configurable.renderers" as="attr_renderers">
+            	<block type="configurableswatches/catalog_product_view_type_configurable_swatches" template="configurableswatches/catalog/product/view/type/options/configurable/swatches.phtml" />
+			</block>
+			<block type="core/text_list" name="product.info.options.configurable.after" as="after">
+				<block type="core/template" template="configurableswatches/catalog/product/view/type/configurable/swatch-js.phtml" />
+			</block>
+		</reference>
+	</PRODUCT_TYPE_configurable>
+
+</layout>

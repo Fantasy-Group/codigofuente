@@ -1,0 +1,81 @@
+<?php $_products = $this->getProductCollection(); ?>
+<?php $_collectionSize = sizeof($_products); ?>
+<?php $_columnCount = Mage::getStoreConfig('homepage/options/count'); ?>
+
+
+<div class="block block-homepage">
+    <div class="block-title title-homepage-topsellers">
+        <span><?php echo $this->getTitle(); ?></span>
+    </div>
+    <div class="block-content">
+        <div class="swiper-container1">
+            <div class="swiper-wrapper">      
+        <?php if (sizeof($_products)): ?>
+            <?php $i=0; foreach ($_products as $_product): ?>
+                <?php if ($i++%$_columnCount==0): ?>
+                
+                <?php endif ?>
+
+                        <?php //echo $_product->getData('is_salable') . Mage::getStoreConfig('homepage/options/salable');  ?>
+                        <?php if ($_product->getData('is_salable')): ?>
+                            <div class="swiper-slide item">
+                                <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>" class="product-image"><img src="<?php echo $this->helper('catalog/image')->init($_product, 'thumbnail')->resize(130); ?>" width="130" height="130" alt="" /></a>
+                                <div class="product-details">
+                                    <p class="product-name"><a href="<?php echo $this->getProductUrl($_product) ?>"><?php echo $this->htmlEscape($_product->getName()) ?></a></p>
+                                    <?php if (Mage::getStoreConfig('homepage/options/price')):?>
+                                        <?php echo $this->getPriceHtml($_product, true) ?>
+                                    <?php endif; ?>
+                                    <?php if (Mage::getStoreConfig('homepage/options/actions')):?>
+                                        <a class="link-cart" href="<?php echo $this->getAddToCartUrl($_product) ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>"><?php echo $this->__('Add to Cart') ?></a>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                        <?php else: ?>
+                            <?php if( Mage::getStoreConfig('homepage/options/salable')) : ?>
+                                <div class="swiper-slide item">
+                                    <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>" class="product-image"><img src="<?php echo $this->helper('catalog/image')->init($_product, 'thumbnail')->resize(130); ?>" width="130" height="130" alt="" /></a>
+                                    <div class="product-details">
+                                        <p class="product-name"><a href="<?php echo $this->getProductUrl($_product) ?>"><?php echo $this->htmlEscape($_product->getName()) ?></a></p>
+                                        <?php if (Mage::getStoreConfig('homepage/options/price')):?>
+                                            <?php echo $this->getPriceHtml($_product, true) ?>
+                                        <?php endif; ?>
+                                        <?php if (Mage::getStoreConfig('homepage/options/actions')):?>
+                                            <a class="link-cart" href="<?php echo $this->getAddToCartUrl($_product) ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>"><?php echo $this->__('Add to Cart') ?></a>
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
+                        <?php endif; ?>
+
+                <?php if ($i%$_columnCount==0 || $i==$_collectionSize): ?>
+                <?php endif ?>
+            <?php endforeach; ?>
+            
+
+
+        <?php else: ?>
+            
+                <div class="swiper-slide">
+                    <?php echo Mage::getStoreConfig('homepage/options/noproduct') ?>
+                </div>
+            
+        <?php endif; ?>
+    </div>
+    
+    </div>
+    <div class="swiper-button-next3"></div>
+    <div class="swiper-button-prev3"></div>
+    </div>
+</div>
+<script type="text/javascript">
+    var swiper = new Swiper('.swiper-container1', {
+        autoplay: 5000,
+        slidesPerView: 5,
+        speed: 1000,
+        spaceBetween: 20,
+        height: 350,
+        loop: true,
+        nextButton: '.swiper-button-next3',
+        prevButton: '.swiper-button-prev3'
+    }); 
+</script>

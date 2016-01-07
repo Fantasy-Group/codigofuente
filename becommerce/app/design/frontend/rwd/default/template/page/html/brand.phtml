@@ -1,0 +1,39 @@
+<!--<?php //$helper = Mage::helper('Bekommerce_Product'); ?>-->
+<div class="swiper-container">
+	<div class="swiper-wrapper">
+      
+        <div id="section2" class="swiper-slide"><input type="image" class="slider-image" src="<?php echo $this->getSkinUrl('images/be1.jpg') ?>" /></div>
+        <div id="section3" class="swiper-slide"><input type="image" class="slider-image" src="<?php echo $this->getSkinUrl('images/be2.jpg') ?>" /></div>
+        <div id="section4" class="swiper-slide"><input type="image" class="slider-image" src="<?php echo $this->getSkinUrl('images/be3.jpg')?>"/></div><!--
+        <div id="section4" class="swiper-slide"><input type="image" class="slider-image" src="<?php //echo $this->getSkinUrl('images/mali1.jpg') ?>" /></div>
+        <div id="section5" class="swiper-slide"><input type="image" class="slider-image" src="<?php //echo $this->getSkinUrl('images/mali2.jpg') ?>" /></div>
+         <div id="section6" class="swiper-slide"><input type="image" class="slider-image" src="<?php //echo $this->getSkinUrl('images/haby1.jpg') ?>" /></div>
+        <div id="section7" class="swiper-slide"><input type="image" class="slider-image" src="<?php //echo $this->getSkinUrl('images/haby2.jpg') ?>" /></div>-->
+	</div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+<script type="text/javascript">
+    var swiper = new Swiper('.swiper-container', {
+        autoplay: 5000,
+        loop: true,
+        speed: 1000,
+        slidesPerView:1,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev'
+    }); 
+</script>
+<section class="ico-brands">
+    <section class="image-ico-bra" id="bra1">
+        <img src="<?php echo $this->getSkinUrl('images/mali.png') ?>" style="margin-bottom: 15%;">
+    </section>
+    <section class="image-ico-bra" id="bra2">
+        <img src="<?php echo $this->getSkinUrl('images/haby.png') ?>" style="margin-bottom: 15%;">
+    </section>
+    <section class="image-ico-bra" id="bra3">
+        <img src="<?php echo $this->getSkinUrl('images/bormioli.png') ?>">
+    </section>
+    <section class="image-ico-bra" id="bra4">
+        <img src="<?php echo $this->getSkinUrl('images/kibys.png') ?>">
+    </section>
+</section>

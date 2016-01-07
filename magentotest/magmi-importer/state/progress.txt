@@ -1,0 +1,39 @@
+title:MAGMI by dweeves - version:0.7.18
+startup:Running Magmi Product Import Engine v1.7.1 by dweeves
+startup:Import Profile:default
+startup:Import Mode:create
+step:step:0.5%
+plugin;Magmi_CSVDataSource;pluginhello:CSV Datasource-1.3-Dweeves- 
+plugin;Magmi_OptimizerPlugin;pluginhello:Magmi Optimizer-1.0.5-Dweeves-http://sourceforge.net/apps/mediawiki/magmi/index.php?title=Magmi_Optimizer 
+plugin;CategoryImporter;pluginhello:On the fly category creator/importer-0.2.3-Dweeves-http://sourceforge.net/apps/mediawiki/magmi/index.php?title=On_the_fly_category_creator/importer 
+plugin;ImageAttributeItemProcessor;pluginhello:Image attributes processor-1.0.25-Dweeves-http://sourceforge.net/apps/mediawiki/magmi/index.php?title=Image_attributes_processor 
+plugin;ItemIndexer;pluginhello:On the fly indexer-0.1.5-Dweeves-http://sourceforge.net/apps/mediawiki/magmi/index.php?title=On_the_fly_indexer 
+plugin;ValueTrimItemProcessor;pluginhello:Value Trimmer for select/multiselect-0.0.3-Dweeves-http://sourceforge.net/apps/mediawiki/magmi/index.php?title=Value_Trimmer_for_select/multiselect 
+plugin;Magmi_ConfigurableItemProcessor;pluginhello:Configurable Item processor-1.3.7-Dweeves-http://sourceforge.net/apps/mediawiki/magmi/index.php?title=Configurable_Item_processor 
+plugin;Magmi_DefaultAttributeItemProcessor;pluginhello:Standard Attribute Import-1.0.5-Dweeves- 
+plugin;Magmi_CSVDataSource;startup:CSV Datasource v1.3 - Importing CSV : /var/www/html/magentotest/var/import/test.csv using separator [ , ] enclosing [ " ]
+plugin;Magmi_OptimizerPlugin;info:Magmi Optimizer v1.0.5 - Optimizing magmi
+plugin;Magmi_OptimizerPlugin;info:Magmi Optimizer v1.0.5 - Adding index MAGMI_EAOV_OPTIMIZATION_IDX on eav_attribute_option_value
+plugin;Magmi_OptimizerPlugin;info:Magmi Optimizer v1.0.5 - Already optmized!
+plugin;Magmi_OptimizerPlugin;info:Magmi Optimizer v1.0.5 - Adding index MAGMI_CPEM_OPTIMIZATION_IDX on catalog_product_entity_media_gallery
+plugin;Magmi_OptimizerPlugin;info:Magmi Optimizer v1.0.5 - Already optmized!
+plugin;Magmi_OptimizerPlugin;info:Magmi Optimizer v1.0.5 - Adding index MAGMI_CCEV_OPTIMIZATION_IDX on catalog_category_entity_varchar
+plugin;Magmi_OptimizerPlugin;info:Magmi Optimizer v1.0.5 - Already optmized!
+plugin;Magmi_OptimizerPlugin;info:Magmi Optimizer v1.0.5 - Adding index MAGMI_EA_CODE_OPTIMIZATION_IDX on eav_attribute
+plugin;Magmi_OptimizerPlugin;info:Magmi Optimizer v1.0.5 - Already optmized!
+startup:Performing Datasouce Lookup...
+lookup:1:0.00016403198242188
+startup:Found 1 records, took 0.00016403198242188 sec
+plugin;Magmi_CSVDataSource;startup:CSV Datasource v1.3 - No BOM detected, assuming File is UTF8 without BOM...
+plugin;Magmi_CSVDataSource;startup:CSV Datasource v1.3 - 34 CSV headers columns found
+columns:34
+plugin;Magmi_ConfigurableItemProcessor;startup:Configurable Item processor v1.3.7 - no options_container set, defaulting to :Block after product info
+plugin;Magmi_DefaultAttributeItemProcessor;startup:Standard Attribute Import v1.0.5 - Newly created items will have default values for columns:page_layout
+startup:Ajusted processed columns:37
+itime:1 - 8.2015991210938E-5 - 8.2015991210938E-5
+dbtime:0 - 0 - 0 - 0
+plugin;ImageAttributeItemProcessor;warning:Image attributes processor v1.0.25 - error copying media/catalog/product/m/a/magento-logo.jpg : download error,URL http://cpcstrategy.com/wp-content/uploads/2013/04/Magento-Logo.jpg is unreachable
+itime:1 - 0.048275947570801 - 0.04811692237854
+dbtime:37 - 0.010235548019409 - 0.010235548019409 - 37
+info:Skus imported OK:1/1
+end:Import Ended

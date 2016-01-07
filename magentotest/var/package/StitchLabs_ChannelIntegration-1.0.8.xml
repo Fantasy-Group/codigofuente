@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<package>
+    <name>StitchLabs_ChannelIntegration</name>
+    <version>1.0.8</version>
+    <stability>stable</stability>
+    <license>MIT</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>This extension provides integration with StitchLabs</summary>
+    <description>This extension provides integration with StitchLabs</description>
+    <notes>1.0.8&#xD;
+* Add fixes to report proper validation object errors&#xD;
+&#xD;
+1.0.7&#xD;
+* Added module version information endpoint&#xD;
+&#xD;
+1.0.6&#xD;
+* Relaxed Magento Core version check to 1.7.0.2&#xD;
+&#xD;
+1.0.5&#xD;
+* Added pre-installation checks&#xD;
+* Added PHP server info verifications&#xD;
+&#xD;
+1.0.4&#xD;
+* Fixed bug with improper function definitions&#xD;
+&#xD;
+1.0.3&#xD;
+* Add pagination functionality to order endpoint&#xD;
+&#xD;
+1.0.2&#xD;
+* Added missing stock_data to product info WSDL&#xD;
+&#xD;
+1.0.1&#xD;
+* Add pagination functionality to product endpoints&#xD;
+&#xD;
+1.0.0&#xD;
+* Initial working release</notes>
+    <authors><author><name>Stitch Labs</name><user>rnavarro</user><email>dev@stitchlabs.com</email></author></authors>
+    <date>2015-03-27</date>
+    <time>16:23:09</time>
+    <contents><target name="magecommunity"><dir name="StitchLabs"><dir name="ChannelIntegration"><dir name="Helper"><file name="Data.php" hash="bab04699a85cc7926b2c7c58ecaf3f2b"/></dir><dir name="Model"><dir name="Info"><dir name="Api"><file name="V2.php" hash="3e031c800f7238e461778ca23ab2dd70"/></dir></dir><dir name="Order"><dir name="Api"><file name="V2.php" hash="2b16df922d4dbb966fedf5cc003b098c"/></dir><file name="Api.php" hash="730b8a3c34167ebe186eb302060d70f0"/></dir><dir name="Product"><dir name="Api"><file name="V2.php" hash="1b0b9c4f84fb9354bf628a0777e8b534"/></dir><file name="Api.php" hash="45722f9587cc18c23e812c8095be75f6"/></dir><file name="Product.php" hash="2341be36cd9392c069871d8f24e405c5"/><dir name="Resource"><dir name="Order"><file name="Collection.php" hash="3c52131d5b2359f469cededfffa5a012"/></dir><file name="Order.php" hash="d1587e02851a724c5e1f757f07433f74"/><dir name="Product"><file name="Collection.php" hash="4b1c3cbeef65923bacad1660085bbd24"/></dir><file name="Product.php" hash="693cb7ff8d9fd86283d2296abc65cf8d"/><file name="Setup.php" hash="d843283f721ce09d934233a6acf02637"/></dir></dir><dir name="etc"><file name="api.xml" hash="2a4ab67214388d1994bec91f67130052"/><file name="config.xml" hash="ffb28f0061026aea6cc2c28a50a7a9e3"/><file name="wsdl.xml" hash="999051ce7892048a0caccc680d72a5aa"/><file name="wsi.xml" hash="7758f9063d665f2eff9842d1c47e82c8"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="StitchLabs_ChannelIntegration.xml" hash="3b9a13293b9d8dc3bb795450c4fe271a"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php><package><name>Mage_Core_Modules</name><channel>community</channel><min>1.7.0.2</min><max/></package><extension><name>soap</name><min/><max/></extension></required></dependencies>
+</package>

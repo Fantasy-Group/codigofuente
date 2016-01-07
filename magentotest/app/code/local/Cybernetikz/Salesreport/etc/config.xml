@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Cybernetikz_Salesreport>
+            <version>0.1.2</version>
+        </Cybernetikz_Salesreport>
+    </modules>
+    
+    <global>
+		<models>
+			<salesreport>
+				<class>Cybernetikz_Salesreport_Model</class>
+			</salesreport>  
+		</models>
+        <helpers>
+            <salesreport>
+                <class>Cybernetikz_Salesreport_Helper</class>
+            </salesreport>  
+        </helpers>
+    </global>
+    
+    <admin>
+        <routers>
+            <salesreport>
+                <use>admin</use>
+                <args>
+                    <module>Cybernetikz_Salesreport</module>
+                    <frontName>salesreport</frontName>
+                </args>
+            </salesreport>
+        </routers>
+    </admin>
+    
+    <adminhtml>		        
+        <layout>
+            <updates>
+                <salesreport>
+                    <file>salesreport.xml</file>
+                </salesreport>
+            </updates>
+        </layout>
+    </adminhtml>
+	
+	<default>
+		<salesreports>
+			<reportsetting>
+				<report_name>SalesReport</report_name>
+				<report_address>shipping</report_address>
+			</reportsetting>
+		</salesreports>
+	</default>
+</config>

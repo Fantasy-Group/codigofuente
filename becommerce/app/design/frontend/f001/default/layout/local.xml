@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="head">
+            <action method="addItem"><type>skin_css</type><name>css/custom.css</name></action>
+            <action method="addItem"><type>skin_css</type><name>css/theme.css</name></action>
+            <action method="addItem"><type>skin_css</type><name>css/ie8.css</name><params/><if>IE 8</if></action>
+        </reference>
+        <reference name="header">
+            <block type="checkout/cart_sidebar" name="headerCart" as="headerCart" template="checkout/cart/header.phtml"/>
+        </reference>
+        <reference name="root">
+            <block type="core/text_list" name="before_footer" as="before_footer"/>
+        </reference>
+        <remove name="left.permanent.callout"/>
+        <remove name="right.permanent.callout"/>
+        <remove name="left.newsletter"/>
+    </default>
+</layout>

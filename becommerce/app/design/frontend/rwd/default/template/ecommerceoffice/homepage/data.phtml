@@ -1,0 +1,22 @@
+<div class="homepage5in1">
+    <?php if (Mage::getStoreConfig('homepage/topsell/enable')): ?>
+        <?php echo $this->getLayout()->createBlock('homepage/topsell')->setTemplate('ecommerceoffice/homepage/topsell.phtml')->toHtml(); ?>
+    <?php endif; ?>
+
+    <?php if (Mage::getStoreConfig('homepage/new/enable')): ?>
+        <?php echo $this->getLayout()->createBlock('homepage/new')->setTemplate('ecommerceoffice/homepage/new.phtml')->toHtml(); ?>
+    <?php endif; ?>
+
+    <?php if (Mage::getStoreConfig('homepage/popular/enable')): ?>
+        <?php echo $this->getLayout()->createBlock('homepage/popular')->setTemplate('ecommerceoffice/homepage/popular.phtml')->toHtml(); ?>
+    <?php endif; ?>
+    
+    <?php if (Mage::getStoreConfig('homepage/toprated/enable')): ?>
+        <?php echo $this->getLayout()->createBlock('homepage/toprated')->setTemplate('ecommerceoffice/homepage/toprated.phtml')->toHtml(); ?>
+    <?php endif; ?>
+    
+    <?php if (Mage::getStoreConfig('homepage/review/enable')): ?>
+        <?php echo $this->getLayout()->createBlock('homepage/review')->setTemplate('ecommerceoffice/homepage/review.phtml')->toHtml(); ?>
+    <?php endif; ?>
+
+</div>

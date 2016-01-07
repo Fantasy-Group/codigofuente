@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to suporte.developer@buscape-inc.com so we can send you a copy immediately.
+ *
+ * @category   Buscape
+ * @package    Buscape_PayULatam
+ * @copyright  Copyright (c) 2010 Buscapé Company (http://www.buscapecompany.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config>
+    <modules>
+        <Buscape_PayULatam>
+            <version>0.1.0</version>
+        </Buscape_PayULatam>
+    </modules>
+    <global>
+        <models>
+            <payulatam>
+                <class>Buscape_PayULatam_Model</class>
+                <resourceModel>payulatam_mysql4</resourceModel>
+            </payulatam>
+            <payulatam_mysql4>
+                <class>Buscape_PayULatam_Model_Mysql4</class>
+                <entities>
+                    <api_debug>
+                        <table>payulatam_api_debug</table>
+                    </api_debug>
+                </entities>
+            </payulatam_mysql4>
+        </models>
+        <resources>
+             <payulatam_setup>
+                <setup>
+                    <module>Buscape_PayULatam</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </payulatam_setup>
+            <payulatam_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </payulatam_write>
+            <payulatam_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </payulatam_read>
+        </resources>
+	<blocks>
+            <payulatam>
+                <class>Buscape_PayULatam_Block</class>
+            </payulatam>
+        </blocks>
+	<helpers>
+            <payulatam>
+                <class>Buscape_PayULatam_Helper</class>
+            </payulatam>
+	</helpers>
+        <events>
+            <checkout_onepage_controller_success_action>
+                <observers>
+                    <payulatam_observer>
+                        <type>singleton</type>
+                        <class>payulatam/observer</class>
+                        <method>sendEmailFrontend</method>
+                    </payulatam_observer>
+                </observers>
+            </checkout_onepage_controller_success_action>
+            <checkout_multishipping_controller_success_action>
+                <observers>
+                    <payulatam_observer>
+                        <type>singleton</type>
+                        <class>payulatam/observer</class>
+                        <method>sendEmailFrontend</method>
+                    </payulatam_observer>
+                </observers>
+            </checkout_multishipping_controller_success_action>
+        </events>
+        <fieldsets>
+             <sales_convert_quote_payment>
+                <payulatam_orderid>
+                    <to_order_payment>*</to_order_payment>
+                </payulatam_orderid>
+                <payulatam_transactionid>
+                    <to_order_payment>*</to_order_payment>
+                </payulatam_transactionid>
+                <payulatam_url_boleto_bancario>
+                    <to_order_payment>*</to_order_payment>
+                </payulatam_url_boleto_bancario>
+                <payulatam_bar_code>
+                    <to_order_payment>*</to_order_payment>
+                </payulatam_bar_code>
+                <payulatam_payment_method>
+                    <to_order_payment>*</to_order_payment>
+                </payulatam_payment_method>
+             </sales_convert_quote_payment>
+        </fieldsets>
+    </global>
+    <frontend>
+        <secure_url>
+            <payulatam>/payulatam/standard</payulatam>
+        </secure_url>   
+        <routers>
+            <payulatam>
+                <use>standard</use>
+                <args>
+                    <module>Buscape_PayULatam</module>
+                    <frontName>payulatam</frontName>
+                </args>
+            </payulatam>
+        </routers>
+        <translate>
+            <modules>
+                <payulatam>
+                    <files>
+                        <default>Buscape_PayULatam.csv</default>
+                    </files>
+                </payulatam>
+            </modules>
+        </translate>
+        <layout>
+            <updates>
+                <payulatam>
+                    <file>buscape_payulatam.xml</file>
+                </payulatam>
+            </updates>
+        </layout>
+    </frontend>
+    <adminhtml>
+        <translate>
+            <modules>
+                <payulatam>
+                    <files>
+                        <default>Buscape_PayULatam.csv</default>
+                    </files>
+                </payulatam>
+            </modules>
+        </translate>        
+        <layout>
+            <updates>
+                <payulatam>
+                    <file>buscape_payulatam.xml</file>
+                </payulatam>
+            </updates>
+        </layout>        
+    </adminhtml>
+    <default>
+        <!-- incluir as configurações de acordo com cada modelo -->
+        <payment>
+            <payulatam_standard>
+                  <active>0</active>
+                  <model>Buscape_PayULatam_Model_Standard</model>
+                  <title>PayU Latam</title>
+                  <typeCheckout>TR</typeCheckout>
+                  <isSandbox>1</isSandbox>
+                  <order_status>pending</order_status>
+                  <allowspecific>1</allowspecific>
+                  <retorno>1</retorno>
+                  <retorno>http://www.urldoseusite.com.br/index.php/PayULatam/standard/success/</retorno>
+            </payulatam_standard>
+        </payment>
+        <payulatam>
+            <settings>
+                <exibitionmodal>1</exibitionmodal>
+            </settings>
+        </payulatam>
+    </default>
+</config>

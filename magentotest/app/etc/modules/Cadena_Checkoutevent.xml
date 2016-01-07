@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Cadena_Checkoutevent>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Cadena_Checkoutevent>
+    </modules>
+</config>

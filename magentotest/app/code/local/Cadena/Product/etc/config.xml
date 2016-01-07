@@ -1,0 +1,28 @@
+<config>
+    <modules>
+        <Cadena_Product>
+            <version>0.1.0</version>
+        </Cadena_Product>
+    </modules>
+    <global>
+        <blocks>
+           <Cadena_Product>
+                <class>Cadena_Product_Block</class>
+            </Cadena_Product>
+        </blocks>  
+        <helpers>
+            <Cadena_Product>
+                <class>Cadena_Product_Helper</class>
+            </Cadena_Product>
+        </helpers>      
+    </global>
+    <frontend>
+        <layout>
+           <updates>
+                <Product>
+                    <file>listproduct.xml</file>
+                </Product>
+            </updates>
+        </layout>
+    </frontend>        
+</config>

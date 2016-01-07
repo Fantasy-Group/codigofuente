@@ -1,0 +1,187 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Webtex
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA that is bundled
+ * with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://www.webtexsoftware.com/LICENSE.txt
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to info@webtexsoftware.com and we will send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade the extension to newer
+ * versions in the future. If you wish to customize the extension for your
+ * needs please refer to http://www.webtexsoftware.com for more information,
+ * or contact us through this email: info@webtexsoftware.com.
+ *
+ * @category   Webtex
+ * @package    Webtex_FbaCommon
+ * @copyright  Copyright (c) 2015 Webtex Solutions, LLC (http://www.webtexsoftware.com/)
+ * @license    http://www.webtexsoftware.com/LICENSE.txt End-User License Agreement
+ */
+-->
+<config>
+    <modules>
+        <Webtex_FbaCommon>
+            <version>3.0.5</version>
+        </Webtex_FbaCommon>
+    </modules>
+    <global>
+        <models>
+            <wfcom>
+                <class>Webtex_FbaCommon_Model</class>
+                <resourceModel>wfcom_resource</resourceModel>
+            </wfcom>
+            <mwsInv>
+                <class>FBAInventoryServiceMWS</class>
+            </mwsInv>
+            <mwsOut>
+                <class>FBAOutboundServiceMWS</class>
+            </mwsOut>
+            <wfcom_resource>
+                <class>Webtex_FbaCommon_Model_Resource</class>
+                <entities>
+                    <marketplace>
+                        <table>fba_mws_marketplace</table>
+                    </marketplace>
+                </entities>
+            </wfcom_resource>
+        </models>
+        <resources>
+            <wfcom_setup>
+                <setup>
+                    <module>Webtex_FbaCommon</module>
+                    <class>Mage_Eav_Model_Entity_Setup</class>
+                </setup>
+            </wfcom_setup>
+        </resources>
+        <blocks>
+            <wfcom>
+                <class>Webtex_FbaCommon_Block</class>
+            </wfcom>
+        </blocks>
+        <helpers>
+            <wfcom>
+                <class>Webtex_FbaCommon_Helper</class>
+            </wfcom>
+        </helpers>
+        <events>
+            <sales_order_invoice_pay>
+                <observers>
+                    <wfcom>
+                        <class>wfcom/observer</class>
+                        <method>orderInvoiced</method>
+                    </wfcom>
+                </observers>
+            </sales_order_invoice_pay>
+            <catalog_product_save_after>
+                <observers>
+                    <wfcom>
+                        <class>wfcom/observer</class>
+                        <method>productSaveAfter</method>
+                    </wfcom>
+                </observers>
+            </catalog_product_save_after>
+            <sales_order_place_after>
+                <observers>
+                    <wfcom>
+                        <class>wfcom/observer</class>
+                        <method>orderPlaced</method>
+                    </wfcom>
+                </observers>
+            </sales_order_place_after>
+        </events>
+    </global>
+    <adminhtml>
+        <layout>
+            <updates>
+                <wfcom>
+                    <file>webtex/fbaCommon.xml</file>
+                </wfcom>
+            </updates>
+        </layout>
+    </adminhtml>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <wfcom before="Mage_Adminhtml">Webtex_FbaCommon</wfcom>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <crontab>
+        <jobs>
+            <check_order>
+                <schedule>
+                    <cron_expr>0 * * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>wfcom/observer::checkOrder</model>
+                </run>
+            </check_order>
+            <check_inventory>
+                <schedule>
+                    <cron_expr>0 * * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>wfcom/observer::checkInventory</model>
+                </run>
+            </check_inventory>
+            <clean_jobs>
+                <schedule>
+                    <cron_expr>0 0 * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>wfcom/observer::cleanJobs</model>
+                </run>
+            </clean_jobs>
+            <clean_stock>
+                <schedule>
+                    <cron_expr>0 0 * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>wfcom/observer::cleanStock</model>
+                </run>
+            </clean_stock>
+            <send_queue>
+                <schedule>
+                    <cron_expr>*/30 * * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>wfcom/observer::sendQueue</model>
+                </run>
+            </send_queue>
+        </jobs>
+    </crontab>
+    <default>
+        <fba>
+            <fba_crontasks>
+                <check_order>3</check_order>
+                <check_inventory>3</check_inventory>
+                <clean_jobs>2</clean_jobs>
+                <clean_stock>2</clean_stock>
+                <send_queue>30</send_queue>
+            </fba_crontasks>
+            <fba_common>
+                <test_mode>0</test_mode>
+                <autosend>0</autosend>
+            </fba_common>
+        </fba>
+    </default>
+    <phpunit>
+        <suite>
+            <modules>
+                <Webtex_FbaCommon/>
+            </modules>
+        </suite>
+    </phpunit>
+</config>

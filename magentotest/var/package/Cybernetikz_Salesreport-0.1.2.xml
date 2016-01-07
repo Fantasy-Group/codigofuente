@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>Cybernetikz_Salesreport</name>
+    <version>0.1.2</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">Open Software License (OSL 3.0)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Custom Reporting with Product and Billing/Shipping info. Easy searchable option by order date and status.</summary>
+    <description>Custom Reporting with Product and Billing/Shipping info. Easy searchable option by order date and status.</description>
+    <notes>Custom Reporting with Product and Billing/Shipping info. Easy searchable option by order date and status.</notes>
+    <authors><author><name>CyberNetikz</name><user>CyberNetikz</user><email>admin@cybernetikz.com</email></author></authors>
+    <date>2014-06-30</date>
+    <time>14:23:45</time>
+    <contents><target name="mageetc"><dir name="modules"><file name="Cybernetikz_Salesreport.xml" hash="9f019cd8c8002124305625477cba472c"/></dir></target><target name="magelocal"><dir name="Cybernetikz"><dir name="Salesreport"><dir name="Helper"><file name="Data.php" hash="01219c696266e745ee0ed668291834ae"/></dir><dir name="Model"><file name="Address.php" hash="c577974ece6d53e50be92a66ff255369"/></dir><dir name="controllers"><dir name="Adminhtml"><file name="SalesController.php" hash="53636f86cd6cba9b3b9743189e7c3bf4"/></dir></dir><dir name="etc"><file name="adminhtml.xml" hash="7869a17d9efd1b3e4cd47c711b9d7ef7"/><file name="config.xml" hash="80a8e2ac3c25a0a0b707192c34ddc068"/><file name="system.xml" hash="9319c372d05d6a2825f049ab3dc48662"/></dir></dir></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="salesreport.xml" hash="3bc3565551291ad72e0ba329c0d9913d"/></dir><dir name="template"><dir name="salesreport"><file name="reportmanage.phtml" hash="f38a6c8d65da0b082e47cf91b6a74613"/></dir></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

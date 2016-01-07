@@ -1,0 +1,404 @@
+2015-08-18T14:13:56+00:00 DEBUG (7): Array
+(
+    [0] => us10.api.mailchimp.com
+    [__pid] => 22392
+)
+
+2015-08-18T14:13:56+00:00 DEBUG (7): Array
+(
+    [0] => 8052f29c294105675c63bf60a60b2e19-us10
+    [__pid] => 22392
+)
+
+2015-08-18T14:13:56+00:00 DEBUG (7): Array
+(
+    [0] => getAccountDetails
+    [__pid] => 22392
+)
+
+2015-08-18T14:13:56+00:00 DEBUG (7): Array
+(
+    [__pid] => 22392
+)
+
+2015-08-18T14:13:56+00:00 DEBUG (7): Array
+(
+    [user_id] => 376d4952806dee366da463edc
+    [username] => Cadena
+    [member_since] => 2015-03-24 20:42:53
+    [is_approved] => 
+    [is_trial] => 1
+    [has_activated] => 1
+    [timezone] => US/Central
+    [plan_type] => free
+    [emails_left] => 12000
+    [pending_monthly] => 
+    [first_payment] => 
+    [last_payment] => 
+    [times_logged_in] => 0
+    [last_login] => 2015-05-08 20:06:40
+    [affiliate_link] => http://www.mailchimp.com/monkey-rewards/?utm_source=freemium_newsletter&utm_medium=email&utm_campaign=monkey_rewards&aid=376d4952806dee366da463edc&afl=1
+    [contact] => Array
+        (
+            [fname] => Andres
+            [lname] => Posada
+            [email] => andres.posada@cadena.com.co
+            [company] => Cadena
+            [address1] => Cra 50 #97A Sur - 150
+            [address2] => 
+            [city] => Medellin
+            [state] => Ant
+            [zip] => 050001
+            [country] => USA
+            [url] => http://www.cadena.com.co
+            [phone] => 
+            [fax] => 
+        )
+
+    [modules] => Array
+        (
+        )
+
+    [orders] => Array
+        (
+        )
+
+    [rewards] => Array
+        (
+            [referrals_this_month] => 0
+            [notify_on] => 
+            [notify_email] => 
+            [credits] => Array
+                (
+                    [this_month] => 0
+                    [total_earned] => 0
+                    [remaining] => 0
+                )
+
+            [inspections] => Array
+                (
+                    [this_month] => 0
+                    [total_earned] => 0
+                    [remaining] => 0
+                )
+
+            [referrals] => Array
+                (
+                )
+
+            [applied] => Array
+                (
+                )
+
+        )
+
+    [__pid] => 22392
+)
+
+2015-08-18T14:13:56+00:00 DEBUG (7): Array
+(
+    [0] => us10.api.mailchimp.com
+    [__pid] => 22392
+)
+
+2015-08-18T14:13:56+00:00 DEBUG (7): Array
+(
+    [0] => 8052f29c294105675c63bf60a60b2e19-us10
+    [__pid] => 22392
+)
+
+2015-08-18T14:13:56+00:00 DEBUG (7): Array
+(
+    [0] => lists
+    [__pid] => 22392
+)
+
+2015-08-18T14:13:56+00:00 DEBUG (7): Array
+(
+    [0] => 
+    [1] => 
+    [2] => 25
+    [__pid] => 22392
+)
+
+2015-08-18T14:13:56+00:00 DEBUG (7): Array
+(
+    [total] => 0
+    [data] => Array
+        (
+        )
+
+    [__pid] => 22392
+)
+
+2015-08-18T14:13:56+00:00 DEBUG (7): Array
+(
+    [0] => us10.api.mailchimp.com
+    [__pid] => 22392
+)
+
+2015-08-18T14:13:56+00:00 DEBUG (7): Array
+(
+    [0] => 8052f29c294105675c63bf60a60b2e19-us10
+    [__pid] => 22392
+)
+
+2015-08-18T14:13:56+00:00 DEBUG (7): Array
+(
+    [0] => listInterestGroupings
+    [__pid] => 22392
+)
+
+2015-08-18T14:13:56+00:00 DEBUG (7): Array
+(
+    [0] => 
+    [__pid] => 22392
+)
+
+2015-08-18T14:13:56+00:00 DEBUG (7): Array
+(
+    [0] => 
+    [__pid] => 22392
+)
+
+2015-08-18T14:13:56+00:00 DEBUG (7): Array
+(
+    [0] => Error: Invalid MailChimp List ID: , code 200
+    [__pid] => 22392
+)
+
+2015-08-18T14:13:56+00:00 DEBUG (7): Array
+(
+    [0] => us10.api.mailchimp.com
+    [__pid] => 22392
+)
+
+2015-08-18T14:13:56+00:00 DEBUG (7): Array
+(
+    [0] => 8052f29c294105675c63bf60a60b2e19-us10
+    [__pid] => 22392
+)
+
+2015-08-18T14:13:56+00:00 DEBUG (7): Array
+(
+    [0] => getAccountDetails
+    [__pid] => 22392
+)
+
+2015-08-18T14:13:56+00:00 DEBUG (7): Array
+(
+    [__pid] => 22392
+)
+
+2015-08-18T14:13:57+00:00 DEBUG (7): Array
+(
+    [user_id] => 376d4952806dee366da463edc
+    [username] => Cadena
+    [member_since] => 2015-03-24 20:42:53
+    [is_approved] => 
+    [is_trial] => 1
+    [has_activated] => 1
+    [timezone] => US/Central
+    [plan_type] => free
+    [emails_left] => 12000
+    [pending_monthly] => 
+    [first_payment] => 
+    [last_payment] => 
+    [times_logged_in] => 0
+    [last_login] => 2015-05-08 20:06:40
+    [affiliate_link] => http://www.mailchimp.com/monkey-rewards/?utm_source=freemium_newsletter&utm_medium=email&utm_campaign=monkey_rewards&aid=376d4952806dee366da463edc&afl=1
+    [contact] => Array
+        (
+            [fname] => Andres
+            [lname] => Posada
+            [email] => andres.posada@cadena.com.co
+            [company] => Cadena
+            [address1] => Cra 50 #97A Sur - 150
+            [address2] => 
+            [city] => Medellin
+            [state] => Ant
+            [zip] => 050001
+            [country] => USA
+            [url] => http://www.cadena.com.co
+            [phone] => 
+            [fax] => 
+        )
+
+    [modules] => Array
+        (
+        )
+
+    [orders] => Array
+        (
+        )
+
+    [rewards] => Array
+        (
+            [referrals_this_month] => 0
+            [notify_on] => 
+            [notify_email] => 
+            [credits] => Array
+                (
+                    [this_month] => 0
+                    [total_earned] => 0
+                    [remaining] => 0
+                )
+
+            [inspections] => Array
+                (
+                    [this_month] => 0
+                    [total_earned] => 0
+                    [remaining] => 0
+                )
+
+            [referrals] => Array
+                (
+                )
+
+            [applied] => Array
+                (
+                )
+
+        )
+
+    [__pid] => 22392
+)
+
+2015-08-18T14:13:57+00:00 DEBUG (7): Array
+(
+    [0] => us10.api.mailchimp.com
+    [__pid] => 22392
+)
+
+2015-08-18T14:13:57+00:00 DEBUG (7): Array
+(
+    [0] => 8052f29c294105675c63bf60a60b2e19-us10
+    [__pid] => 22392
+)
+
+2015-08-18T14:13:57+00:00 DEBUG (7): Array
+(
+    [0] => ping
+    [__pid] => 22392
+)
+
+2015-08-18T14:13:57+00:00 DEBUG (7): Array
+(
+    [__pid] => 22392
+)
+
+2015-08-18T14:13:57+00:00 DEBUG (7): Array
+(
+    [0] => Everything's Chimpy!
+    [__pid] => 22392
+)
+
+2015-08-18T14:13:58+00:00 DEBUG (7): Array
+(
+    [0] => us10.api.mailchimp.com
+    [__pid] => 22392
+)
+
+2015-08-18T14:13:58+00:00 DEBUG (7): Array
+(
+    [0] => 8052f29c294105675c63bf60a60b2e19-us10
+    [__pid] => 22392
+)
+
+2015-08-18T14:13:58+00:00 DEBUG (7): Array
+(
+    [0] => listInterestGroupings
+    [__pid] => 22392
+)
+
+2015-08-18T14:13:58+00:00 DEBUG (7): Array
+(
+    [0] => null
+    [__pid] => 22392
+)
+
+2015-08-18T14:13:59+00:00 DEBUG (7): Array
+(
+    [0] => 
+    [__pid] => 22392
+)
+
+2015-08-18T14:13:59+00:00 DEBUG (7): Array
+(
+    [0] => Error: Invalid MailChimp List ID: null, code 200
+    [__pid] => 22392
+)
+
+2015-09-09T12:29:54+00:00 DEBUG (7): Array
+(
+    [0] => us10.api.mailchimp.com
+    [__pid] => 7414
+)
+
+2015-09-09T12:29:54+00:00 DEBUG (7): Array
+(
+    [0] => 8052f29c294105675c63bf60a60b2e19-us10
+    [__pid] => 7414
+)
+
+2015-09-09T12:29:54+00:00 DEBUG (7): Array
+(
+    [0] => listMemberInfo
+    [__pid] => 7414
+)
+
+2015-09-09T12:29:54+00:00 DEBUG (7): Array
+(
+    [0] => 
+    [1] => jhojanestiven1996@gmail.com
+    [__pid] => 7414
+)
+
+2015-09-09T12:29:55+00:00 DEBUG (7): Array
+(
+    [0] => 
+    [__pid] => 7414
+)
+
+2015-09-09T12:29:55+00:00 DEBUG (7): Array
+(
+    [0] => Error: Invalid MailChimp List ID: , code 200
+    [__pid] => 7414
+)
+
+2015-09-09T12:29:55+00:00 DEBUG (7): Array
+(
+    [0] => us10.api.mailchimp.com
+    [__pid] => 7414
+)
+
+2015-09-09T12:29:55+00:00 DEBUG (7): Array
+(
+    [0] => 8052f29c294105675c63bf60a60b2e19-us10
+    [__pid] => 7414
+)
+
+2015-09-09T12:29:55+00:00 DEBUG (7): Array
+(
+    [0] => listsForEmail
+    [__pid] => 7414
+)
+
+2015-09-09T12:29:55+00:00 DEBUG (7): Array
+(
+    [0] => jhojanestiven1996@gmail.com
+    [__pid] => 7414
+)
+
+2015-09-09T12:29:55+00:00 DEBUG (7): Array
+(
+    [0] => 
+    [__pid] => 7414
+)
+
+2015-09-09T12:29:55+00:00 DEBUG (7): Array
+(
+    [0] => Error: There is no record of the email address "jhojanestiven1996@gmail.com" in your account, code 232
+    [__pid] => 7414
+)
+

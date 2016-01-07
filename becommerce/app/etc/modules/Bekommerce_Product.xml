@@ -1,0 +1,8 @@
+<config>
+	<modules>
+		<Bekommerce_Product>
+			<active>true</active>
+			<codePool>local</codePool>
+		</Bekommerce_Product>
+	</modules>
+</config>

@@ -1,0 +1,146 @@
+<?php $helper = Mage::helper('Bekommerce_Product'); ?>
+<div id="slider" style="width:455px;margin:0 auto;">
+	<div class="slidercontrolwr" style="left:35%;">
+		<div class="slidercontrol"><a title="Slide 1" href="#section1">1</a> <a title="Slide 2" href="#section2">2</a> <a title="Slide 3" href="#section3">3</a> <a title="Slide 4" href="#section4">4</a> <a title="Slide 5" href="#section5">5</a> <a title="Slide 6" href="#section6">6</a> <a title="Slide 7" href="#section7">7</a></div>
+	</div>
+	<div class="scroller" style="width:455px;">
+		<div class="content">
+			<div id="section1" class="sectionslide" style="padding:0.5%;"><input type="image" style="margin-top:40%;" src="http://ec2-52-5-247-32.compute-1.amazonaws.com/becommerce/skin/frontend/f001/red/images/kibys.png" 
+			value="<?php
+                        $currentUrl = Mage::helper('core/url')->getCurrentUrl();
+                        if($currentUrl===$helper->getOnSaleUrl('Kybis Aqua')):
+                            echo $helper->getNotOnSaleUrl();
+                        echo "\"checked=\"checked";
+                        else:
+                            echo $helper->getOnSaleUrl('Kybis Aqua');
+                        endif;
+                    ?>" onclick="setLocation(this.value)">
+            </div>
+			<div id="section2" class="sectionslide"><input type="image" src="http://ec2-52-5-247-32.compute-1.amazonaws.com/becommerce/skin/frontend/f001/red/images/salvina.png" 
+            value="<?php
+                        $currentUrl = Mage::helper('core/url')->getCurrentUrl();
+                        if($currentUrl===$helper->getOnSaleUrl('Salvina Swimwear')):
+                            echo $helper->getNotOnSaleUrl();
+                        echo "\"checked=\"checked";
+                        else:
+                            echo $helper->getOnSaleUrl('Salvina Swimwear');
+                        endif;
+                    ?>" onclick="setLocation(this.value)"/></div>
+			<div id="section3" class="sectionslide" style="background:#2B4390; padding:1%;"><input type="image" style="margin-top:0%;" src="http://ec2-52-5-247-32.compute-1.amazonaws.com/becommerce/skin/frontend/f001/red/images/haby.png" 
+            value="<?php
+                        $currentUrl = Mage::helper('core/url')->getCurrentUrl();
+                        if($currentUrl===$helper->getOnSaleUrl('')):
+                            echo $helper->getNotOnSaleUrl();
+                        echo "\"checked=\"checked";
+                        else:
+                            echo $helper->getOnSaleUrl('');
+                        endif;
+                    ?>" onclick="setLocation(this.value)"/></div>
+			<div id="section4" style="padding:0.5%;" class="sectionslide"><input style="width:120%;" type="image" src="http://ec2-52-5-247-32.compute-1.amazonaws.com/becommerce/skin/frontend/f001/red/images/bodyline.png"  
+            value="<?php
+                        $currentUrl = Mage::helper('core/url')->getCurrentUrl();
+                        if($currentUrl===$helper->getOnSaleUrl('BodyLine Control')):
+                            echo $helper->getNotOnSaleUrl();
+                        echo "\"checked=\"checked";
+                        else:
+                            echo $helper->getOnSaleUrl('BodyLine Control');
+                        endif;
+                    ?>" onclick="setLocation(this.value)"/></div>
+            <div id="section5" style="padding:0.5%;" class="sectionslide"><input type="image" style="width:200px;" src="http://ec2-52-5-247-32.compute-1.amazonaws.com/becommerce/skin/frontend/f001/red/images/santolina.jpg"  
+            value="<?php
+                        $currentUrl = Mage::helper('core/url')->getCurrentUrl();
+                        if($currentUrl===$helper->getOnSaleUrl('Santolina Lingerie')):
+                            echo $helper->getNotOnSaleUrl();
+                        echo "\"checked=\"checked";
+                        else:
+                            echo $helper->getOnSaleUrl('Santolina Lingerie');
+                        endif;
+                    ?>" onclick="setLocation(this.value)"/></div>
+            <div id="section6" class="sectionslide" style="padding:0.5%;"><input type="image" style="width:200px;margin-top:20%;" src="http://ec2-52-5-247-32.compute-1.amazonaws.com/becommerce/skin/frontend/f001/red/images/mali.png"  
+            value="<?php
+                        $currentUrl = Mage::helper('core/url')->getCurrentUrl();
+                        if($currentUrl===$helper->getOnSaleUrl('Mali Swimwear')):
+                            echo $helper->getNotOnSaleUrl();
+                        echo "\"checked=\"checked";
+                        else:
+                            echo $helper->getOnSaleUrl('Mali Swimwear');
+                        endif;
+                    ?>" onclick="setLocation(this.value)"/></div>
+            <div id="section7" class="sectionslide" style="padding:0.5%;"><input type="image" style="width:200px;margin-top:10%;" src="http://ec2-52-5-247-32.compute-1.amazonaws.com/becommerce/skin/frontend/f001/red/images/bormioli.jpg"  
+            value="<?php
+                        $currentUrl = Mage::helper('core/url')->getCurrentUrl();
+                        if($currentUrl===$helper->getOnSaleUrl('Bormioli Rocco')):
+                            echo $helper->getNotOnSaleUrl();
+                        echo "\"checked=\"checked";
+                        else:
+                            echo $helper->getOnSaleUrl('Bormioli Rocco');
+                        endif;
+                    ?>" onclick="setLocation(this.value)"/></div>
+		</div>
+	</div>
+</div>
+<script charset="utf-8" type="text/javascript">// <![CDATA[
+    var my_glider = new Glider('slider', {duration:0.5, autoGlide: true, frequency: 4, initialSection: 'section1'});   
+// ]]></script>
+
+<?php
+$_productCollection = Mage::getModel('catalog/product')->getCollection();
+
+ $_productCollection->addAttributeToSelect('image')
+                      ->addAttributeToSelect('name')
+                      ->addAttributeToSelect('price')
+                      ->addAttributeToSelect('special_price')
+                      ->addAttributeToSelect('brand_name')
+                      ->addAttributeToFilter(array(
+                            array('attribute'=>'brand_name', 'eq'=>$_GET['brand_name'])
+                      )); 
+Mage::getModel('review/review')->appendSummary($_productCollection);
+
+$_helper = $this->helper('catalog/output');
+?>
+
+<?php if(!$_productCollection->count()): ?>
+    <p class="note-msg"><?php echo $this->__('There are no products matching the selection.') ?></p>
+<?php else: ?>
+    <div class="category-products">
+        <?php // List mode ?>
+            <?php $_iterator = 0; ?>
+            <ol class="products-list" id="products-list">
+                <?php foreach ($_productCollection as $_product): ?>
+                    <li class="item<?php if( ++$_iterator == sizeof($_productCollection) ): ?> last<?php endif; ?>">
+                        <?php // Product Image ?>
+                        <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="product-image"><img src="<?php echo $_product->getImageUrl(); ?>" width="135" height="135" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" /></a>
+                        <?php // Product description ?>
+                        <div class="product-shop">
+                            <div class="f-fix">
+                                <?php $_productNameStripped = $this->stripTags($_product->getName(), null, true); ?>
+                                <h2 class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $_productNameStripped; ?>"><?php echo $_helper->productAttribute($_product, $_product->getName() , 'name'); ?></a></h2>
+                                <?php if($_product->getRatingSummary()): ?>
+                                    <?php echo $this->getReviewsSummaryHtml($_product) ?>
+                                <?php endif; ?>
+                                <?php echo $this->getPriceHtml($_product, true) ?>
+                                <?php if($_product->isSaleable()): ?>
+                                    <p><button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="button btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button></p>
+                                <?php else: ?>
+                                    <p class="availability out-of-stock"><span><?php echo $this->__('Out of stock') ?></span></p>
+                                <?php endif; ?>
+                                <div class="desc std">
+                                    <?php echo $_helper->productAttribute($_product, $_product->getShortDescription(), 'short_description') ?>
+                                    <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $_productNameStripped ?>" class="link-learn"><?php echo $this->__('Learn More') ?></a>
+                                </div>
+                                <ul class="add-to-links" style="margin:0; padding-left:0; list-style: none;">
+                                    <?php if ($this->helper('wishlist')->isAllow()) : ?>
+                                        <li><a href="<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>" class="link-wishlist"><?php echo $this->__('Add to Wishlist') ?></a></li>
+                                    <?php endif; ?>
+                                    <?php if($_compareUrl=$this->getAddToCompareUrl($_product)): ?>
+                                        <li><span class="separator">|</span> <a href="<?php echo $_compareUrl ?>" class="link-compare"><?php echo $this->__('Add to Compare') ?></a></li>
+                                    <?php endif; ?>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                <?php endforeach; ?>
+            </ol>
+            <script type="text/javascript">decorateList('products-list', 'none-recursive')</script>
+    </div>
+<?php endif; ?>

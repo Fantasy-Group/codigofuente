@@ -1,0 +1,185 @@
+<?php
+    /**
+    * Magento
+    *
+    * NOTICE OF LICENSE
+    *
+    * This source file is subject to the Academic Free License (AFL 3.0)
+    * that is bundled with this package in the file LICENSE_AFL.txt.
+    * It is also available through the world-wide-web at this URL:
+    * http://opensource.org/licenses/afl-3.0.php
+    * If you did not receive a copy of the license and are unable to
+    * obtain it through the world-wide-web, please send an email
+    * to license@magentocommerce.com so we can send you a copy immediately.
+    *
+    * DISCLAIMER
+    *
+    * Do not edit or add to this file if you wish to upgrade Magento to newer
+    * versions in the future. If you wish to customize Magento for your
+    * needs please refer to http://www.magentocommerce.com for more information.
+    *
+    * @category    design
+    * @package     base_default
+    * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+    * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+    */
+?>
+<?php
+    /**
+    * Product list toolbar
+    *
+    * @see Mage_Catalog_Block_Product_List_Toolbar
+    */
+?>
+<?php
+    if($this->getCollection()->getSize()): ?>
+    <div class="toolbar">
+        <?php if( $this->isExpanded() ): ?>
+            <div class="sorter">
+                <?php if( $this->isEnabledViewSwitcher() ): ?>
+                    <p class="view-mode">
+                        <?php $_modes = $this->getModes(); ?>
+                        <?php if($_modes && count($_modes)>1): ?>
+                            <label><?php echo $this->__('View as') ?>:</label>
+                            <?php foreach ($this->getModes() as $_code=>$_label): ?>
+                                <?php if($this->isModeActive($_code)): ?>
+                                    <strong title="<?php echo $_label ?>" class="<?php echo strtolower($_code); ?>"><?php echo $_label ?></strong>&nbsp;
+                                    <?php else: ?>
+                                    <a href="<?php echo $this->getModeUrl($_code) ?>" title="<?php echo $_label ?>" class="<?php echo strtolower($_code); ?>"><?php echo $_label ?></a>&nbsp;
+                                    <?php endif; ?>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
+                    </p>
+                    <?php endif; ?>
+                <?php
+                    if(Mage::getStoreConfig('customtoolbar/customtoolbar_general/enabled') == 1):
+                ?>
+                <div class="filter-by">
+                    <?php 
+                        $entity_type_id =Mage::getModel('catalog/product')->getResource()->getTypeId();
+                        $attributes = Mage::getResourceModel('eav/entity_attribute_collection')->setEntityTypeFilter($entity_type_id)->addFieldToFilter("backend_type",array("eq"=>'int'))->addFieldToFilter("frontend_input",array("eq"=>'select'))->addFieldToFilter("used_for_filter_by",array("eq"=>'1'));
+                    ?>
+                    <label><?php echo $this->__('Filter By') ?></label>
+                    <select onchange="fillattvalue(this.value)" id="attributes" class="filter-by-select">
+                        <option value="select"><?php echo $this->__('Please Select') ?></option>
+                        <?php foreach($attributes as $attribute): ?>
+                            <option value="<?php echo $attribute->getAttributeCode(); ?>">
+                                <?php echo $attribute->getFrontendLabel() ?>
+                            </option>
+                        <?php endforeach; ?>
+                    </select>
+                    <section id="attvalue"></section>
+                </div>
+                <?php endif ?>
+                <div class="sort-by" style="padding-right: 0px;">
+                    <!-- sort by -->
+                    <select onchange="setLocation(this.value)">
+                        <option value="#" selected=""><?php echo $this->__('Sort by') ?></option>
+                        <?php foreach($this->getAvailableOrders() as $_key=>$_order): ?>
+                            <option value="<?php echo $this->getOrderUrl($_key, 'asc') ?>"<?php if($this->isOrderCurrent($_key)): ?> <?php endif; ?>>
+                                <?php echo $this->__($_order) ?>
+                            </option>
+                            <?php endforeach; ?>
+                    </select>
+                    <?php if($this->getCurrentDirection() == 'desc'): ?>
+                        <a href="<?php echo $this->getOrderUrl(null, 'asc') ?>" title="<?php echo $this->__('Set Ascending Direction') ?>"><img src="<?php echo $this->getSkinUrl('images/i_desc_arrow.gif') ?>" alt="<?php echo $this->__('Set Ascending Direction') ?>" class="v-middle" /></a>
+                        <?php else: ?>
+                        <a href="<?php echo $this->getOrderUrl(null, 'desc') ?>" title="<?php echo $this->__('Set Descending Direction') ?>"><img src="<?php echo $this->getSkinUrl('images/i_asc_arrow.gif') ?>" alt="<?php echo $this->__('Set Descending Direction') ?>" class="v-middle" /></a>
+                        <?php endif; ?>
+                </div>
+
+                <div class="title-category">
+                    <?php echo Mage::getSingleton('catalog/layer')->getCurrentCategory()->getName(); ?>
+                </div>  
+
+                <div class="limiter">
+                    <label><?php echo $this->__('Show') ?></label>
+                    <select onchange="setLocation(this.value)">
+                        <?php foreach ($this->getAvailableLimit() as  $_key=>$_limit): ?>
+                            <option value="<?php echo $this->getLimitUrl($_key) ?>"<?php if($this->isLimitCurrent($_key)): ?> selected="selected"<?php endif ?>>
+                                <?php echo $_limit ?>
+                            </option>
+                            <?php endforeach; ?>
+                    </select> <?php echo $this->__('per page') ?>
+                </div>
+                <div class="clear-both"></div>
+            </div>
+        <?php endif ?>
+    </div>
+    <?php endif ?>
+
+        <div class="pager">
+           <!-- <p class="amount">
+                <?php if($this->getLastPageNum()>1): ?>
+                    <?php echo $this->__('Items %s to %s of %s total', $this->getFirstNum(), $this->getLastNum(), $this->getTotalNum()) ?>
+                    <?php else: ?>
+                    <strong><?php echo $this->__('%s Item(s)', $this->getTotalNum()) ?></strong>
+                    <?php endif; ?>
+            </p>-->
+            <?php echo $this->getPagerHtml() ?>
+        </div>
+
+<script language ="javascript" type="text/javascript">
+    function fillattvalue(item)
+    {
+        var parameters = {att_code : item }
+        var url = '<?php echo Mage::helper('adminhtml')->getUrl('customtoolbar/index/fillattvalues'); ?>';
+        var e = document.getElementById("attributes");
+        var select_index = e.options[e.selectedIndex].value;
+        if(select_index == "select")
+        {
+            document.getElementById('attvalue').style.display='none';
+        }
+        else
+            {
+            document.getElementById('loading-mask').style.display = 'block';
+            new Ajax.Request(url, {
+                    method: 'post',
+                    //asynchronous: false,
+                    onSuccess: function(transport) {
+                        document.getElementById('loading-mask').style.display='block';
+                        if(transport.responseText) {
+                            var response = transport.responseText;
+                            console.log(response);
+                            response = response.evalJSON();
+                            var total_length = response.length;
+                            var html='';
+                            var cur_url = location.href;
+                            var cur_att = document.getElementById("attributes").value;
+                            var cur_cat_url ='<?php echo Mage::getBaseUrl().Mage::getModel('catalog/layer')->getCurrentCategory()->getUrlPath() ?>'
+                            html+= '<select onchange="setLocation(this.value)" class="filter-by-select">';
+                            html+= '<option value="">Please Select</option>';
+                            for (var i=1;i<total_length;i++){
+                                var inner_parameters = {
+                                    lable : response[i]['lable'],
+                                    value : response[i]['value']
+                                }
+                                <?php $is_anchor = Mage::getModel('catalog/layer')->getCurrentCategory()->getIsAnchor();
+                                    if($is_anchor == 1){ ?>
+                                    var baseURL = cur_cat_url + "?" + cur_att +"=" + response[i]['value'];
+                                    <?php } else { ?>
+                                    //var baseURL = cur_url.substring(0, cur_url.indexOf('/', 14))+ "/index.php/catalogsearch/result/?q=" + response[i]['lable'];
+                                    var baseURL =  '<?php  echo Mage::getBaseUrl() ?>' + "catalogsearch/advanced/result/?"+item+"[]=" + response[i]['value'];
+                                    <?php } ?>
+                                html+= '<option value="'+baseURL+'">';
+                                html+= response[i]['lable'];
+                                html+='</option>';
+                            }
+                            html+='</select>'
+                            document.getElementById('attvalue').innerHTML=html; 
+                            document.getElementById('loading-mask').style.display='none';
+                            document.getElementById('attvalue').style.display='inline-block';
+                        }
+                    },
+                    parameters:parameters
+            });
+        }
+    }
+
+</script>
+
+<div id="loading-mask" class="update-box" style="display:none;">
+    <div class="update-popup" style="background: url(<?php echo $this->getSkinUrl('images/main-bg.png') ?>)  repeat;">
+        <p><?php echo $this->__('Please wait....') ?></p>
+    </div>
+</div>

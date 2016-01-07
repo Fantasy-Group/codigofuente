@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Webtex
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA that is bundled
+ * with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://www.webtexsoftware.com/LICENSE.txt
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to info@webtexsoftware.com and we will send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade the extension to newer
+ * versions in the future. If you wish to customize the extension for your
+ * needs please refer to http://www.webtexsoftware.com for more information,
+ * or contact us through this email: info@webtexsoftware.com.
+ *
+ * @category   Webtex
+ * @package    Webtex_Queue
+ * @copyright  Copyright (c) 2015 Webtex Solutions, LLC (http://www.webtexsoftware.com/)
+ * @license    http://www.webtexsoftware.com/LICENSE.txt End-User License Agreement
+ */
+-->
+<config>
+    <modules>
+        <Webtex_Queue>
+            <version>1.0.1</version>
+        </Webtex_Queue>
+    </modules>
+    <global>
+        <models>
+            <wqueue>
+                <class>Webtex_Queue_Model</class>
+                <resourceModel>wqueue_resource</resourceModel>
+            </wqueue>
+            <wqueue_resource>
+                <class>Webtex_Queue_Model_Resource</class>
+                <entities>
+                    <job>
+                        <table>fba_queue_job</table>
+                    </job>
+                </entities>
+            </wqueue_resource>
+        </models>
+        <resources>
+            <wqueue_setup>
+                <setup>
+                    <module>Webtex_Queue</module>
+                    <class>Mage_Eav_Model_Entity_Setup</class>
+                </setup>
+            </wqueue_setup>
+        </resources>
+        <blocks>
+            <wqueue>
+                <class>Webtex_Queue_Block</class>
+            </wqueue>
+        </blocks>
+        <helpers>
+            <wqueue>
+                <class>Webtex_Queue_Helper</class>
+            </wqueue>
+        </helpers>
+    </global>
+    <adminhtml>
+        <layout>
+            <updates>
+                <wqueue>
+                    <file>webtex/queue.xml</file>
+                </wqueue>
+            </updates>
+        </layout>
+    </adminhtml>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <wqueue before="Mage_Adminhtml">Webtex_Queue</wqueue>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <phpunit>
+        <suite>
+            <modules>
+                <Webtex_Queue/>
+            </modules>
+        </suite>
+    </phpunit>
+</config>

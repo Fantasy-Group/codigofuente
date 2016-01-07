@@ -1,0 +1,117 @@
+<?php
+/**
+ * Webtex
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA that is bundled
+ * with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://www.webtexsoftware.com/LICENSE.txt
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to info@webtexsoftware.com and we will send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade the extension to newer
+ * versions in the future. If you wish to customize the extension for your
+ * needs please refer to http://www.webtexsoftware.com for more information,
+ * or contact us through this email: info@webtexsoftware.com.
+ *
+ * @category   Webtex
+ * @package    Webtex_FbaCommon
+ * @copyright  Copyright (c) 2015 Webtex Solutions, LLC (http://www.webtexsoftware.com/)
+ * @license    http://www.webtexsoftware.com/LICENSE.txt End-User License Agreement
+ */
+/** @var Webtex_FbaOrder_Block_Orders_View_Element_Grid $this */
+$htmlName = $this->getElement()->getName();
+$readonly = $this->getElement()->getReadonly();
+
+$value = $this->getElement()->getValue();
+/** @var Varien_Data_Form_Element_Abstract[] $collection */
+$collection = isset($value['collection']) ? $value['collection'] : array();
+$columns = isset($value['columns']) ? $value['columns'] : array();
+$counter = 0;
+?>
+<tr>
+    <td class="label"><?php echo $this->getElement()->getLabel() ?></td>
+    <td colspan="10" class="grid">
+        <table id="<?php echo $htmlName;?>-simple-grid-table" class="dynamic-grid" cellspacing="0"
+               cellpadding="0">
+            <tbody>
+            <tr>
+                <?php foreach ($columns as $name): ?>
+                    <th><?php echo $this->__($name) ?></th>
+                <?php endforeach; ?>
+                <?php if (!$readonly): ?>
+                    <th>
+                        <button id="add_new_record_button" title="Add" type="button" class="scalable add">
+                            <span><span><span><?php echo $this->__('Add') ?></span></span></span></button>
+                    </th>
+                <?php endif; ?>
+            </tr>
+            <?php foreach ($collection as $item): ?>
+                <tr class="simple-grid-row" id="<?php echo $htmlName ?>-row-<?php echo $counter ?>">
+                    <?php foreach ($columns as $index => $name): ?>
+                        <td>
+                            <?php
+                            /** @var Varien_Data_Form_Element_Abstract $currentItem */
+                            $currentItem = $item[$index];
+                            $currentItem->setName($htmlName . "[row_{$counter}][{$index}]");
+                            if ($readonly) {
+                                $currentItem->setReadonly($readonly);
+                            }
+                            echo $currentItem->getElementHtml();
+                            ?>
+                        </td>
+                    <?php endforeach; ?>
+                    <?php if (!$readonly): ?>
+                        <td class="a-left" id="<?php echo $htmlName ?>-delete-button-<?php echo $counter ?>'">
+                            <button
+                                onclick="$('<?php echo $htmlName ?>-row-<?php echo $counter ?>').remove();"
+                                title="Delete" type="button" class="scalable delete delete-option">
+                                <span><span><span>Delete</span></span></span></button>
+                        </td>
+                    <?php endif; ?>
+                </tr>
+                <?php
+                $counter++;
+            endforeach;
+            ?>
+            </tbody>
+        </table>
+    </td>
+</tr>
+
+<?php if (!$readonly): ?>
+<?php
+    $template = $value['template'];
+    $htmlTemplate = '<tr class="simple-grid-row" id="'.$htmlName.'-row-{{counter}}">';
+    foreach ($columns as $index => $name) {
+        $currentItem = $template[$index];
+        $currentItem->setName("{$htmlName}[row_{{counter}}][{$index}]");
+        $htmlTemplate .= '<td>' . trim($currentItem->getElementHtml(), "\n") . '</td>';
+    }
+    $htmlTemplate .= '<td class="a-left" id="' . $htmlName . '-delete-button-{{counter}}">'
+        . ' <button onclick="$(\'' . $htmlName . '-row-{{counter}}\').remove();"'
+        . 'title="Delete" type="button" class="scalable delete delete-option">'
+        . '<span><span><span>Delete</span></span></span></button></td>';
+    $htmlTemplate .= '</tr>';
+
+?>
+<script type="text/javascript">//<![CDATA[
+
+    var form_html_row = <?php echo json_encode($htmlTemplate); ?>;
+
+    var row_counter = <?php echo $counter;?>;
+
+    var table = "<?php echo $htmlName;?>-simple-grid-table";
+
+    $('add_new_record_button').observe('click', function () {
+        $(table).insert(form_html_row.replace(/\{\{counter\}\}/ig, row_counter));
+        row_counter++;
+    });
+
+    //]]></script>
+<?php endif; ?>

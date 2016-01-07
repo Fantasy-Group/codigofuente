@@ -1,0 +1,44 @@
+<?php $_reviews = $this->getReviewsData();?>
+
+
+<div class="block block-homepage">
+    <div class="block-title title-homepage-reviews">
+        <span><?php echo $this->getTitle(); ?></span>
+    </div>
+    <div class="block-content">
+        <div class="content-home-wrapper">
+            <?php $i=0; foreach($_reviews as $review): ?>
+                <?php // var_dump($review); ?>
+                <?php $ratings = $review['ratings'][0];
+//                var_dump($ratings);
+//                exit();
+                ?>
+                <dl>
+                    <dt>
+                        <a href="<?php echo $review['review_url']; ?>"><?php echo $review['title']; ?></a> <?php echo $this->__('Review by');?> <strong><?php echo $review['nickname']; ?></strong>
+                    </dt>
+                    <dd>
+                        <table class="ratings-table">
+                                <col width="1">
+                                <col>
+                                <tbody>
+                                    <?php foreach ($ratings as $k => $v): ?>
+                                        <tr>
+                                            <th><?php echo $k?></th>
+                                            <td>
+                                                <div class="rating-box">
+                                                    <div style="width: <?php echo $v ?>%;" class="rating"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    <?php endforeach; ?>
+                                </tbody>
+                            </table>
+                        <?php echo $review['detail']; ?>
+                    </dd>
+                </dl><br/>
+<!--                <p>&nbsp;</p>-->
+            <?php endforeach; ?>
+        </div>
+    </div>
+</div>

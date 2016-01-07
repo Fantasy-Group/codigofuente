@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Cybernetikz_Salesreport>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Cybernetikz_Salesreport>
+    </modules>
+</config>

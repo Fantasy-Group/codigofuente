@@ -1,0 +1,134 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to suporte.developer@buscape-inc.com so we can send you a copy immediately.
+ *
+ * @category   design_default
+ * @package    Mage
+ * @copyright  Copyright (c) 2010 Buscapé Company (http://www.buscapecompany.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+?>
+<fieldset class="form-list">
+    <?php 
+          $_code = $this->getMethodCode();
+          $_standardPD = Mage::getSingleton('payulatam/standard');
+          
+          $totals = Mage::getSingleton('adminhtml/session_quote')->getQuote()->collectTotals();  
+          //$shippingAmount = Mage::getSingleton('checkout/session')->getQuote()->getShippingAddress()->getShippingAmount();  
+               
+          $paymentMethodAbles = $_standardPD->getPaymentMethodAbles();
+          
+    ?>
+    <ul id="payment_form_<?php echo $_code ?>" style="display:none">
+        <ul class="forma_pagamento">
+          <li>
+            <ul>
+              <li><label class="required"><em>*</em> Selecione uma Forma de Pagamento </label></li>
+            </ul>
+          </li>
+          
+          <li style="float:left;">
+            <ul>
+              <?php
+                $creditCards = array(1 => 'ELO', 2 => 'MASTERCARD', 3 => 'AMEX', 4 => 'DINERS', 5 => 'VISA');
+                foreach($paymentMethodAbles->paymentMethods as $paymentMethodAble){
+                    if(!array_search($paymentMethodAble->description, $creditCards)){
+                        $clickAction = "document.getElementById('creditCardData').style.display = 'none';document.getElementById('campo_obrigatorio_payulatam').value='YES';";
+                    }else{
+                        $clickAction = "document.getElementById('creditCardData').style.display = 'block';document.getElementById('campo_obrigatorio_payulatam').value='YES';";
+                    }
+              ?>
+              <li style="float:left;width:65px;">
+                <input type="radio" name="payment[cc_type]" value="<?php echo $paymentMethodAble->description; ?>" onclick="<?php echo $clickAction;?>"/><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN). 'frontend/base/default/buscape/payulatam/images/'. strtolower($paymentMethodAble->description); ?>.gif" alt="<?php echo $paymentMethodAble->description; ?>" title="<?php echo $paymentMethodAble->description; ?>" /> 
+              </li>
+              <?php
+                }
+              ?>
+            </ul>
+          </li>
+          <li style="float:left;">      
+            <ul>
+              <li><input id="campo_obrigatorio_payulatam" type="hidden" class="required-entry" /></li>
+            </ul>
+          </li>
+          <li style="clear:both;"></li>
+          <li id="creditCardData" style="display:none;">
+              <ul>
+                  <li>
+                      <label for="<?php echo $_code ?>_cc_owner" ><em>*</em><?php echo $this->__('Name on Card') ?></label>
+                      <div class="input-box">
+                          <input type="text" title="<?php echo $this->__('Name on Card') ?>" class="input-text required-entry" id="<?php echo $_code ?>_cc_owner" name="payment[cc_owner]" value="<?php echo $this->htmlEscape($this->getInfoData('cc_owner')) ?>" />
+                      </div>
+                  </li>
+                  <li>
+                      <label for="<?php echo $_code ?>_cc_number" ><em>*</em><?php echo $this->__('Credit Card Number') ?></label>
+                      <div class="input-box">
+                          <input type="text" id="<?php echo $_code ?>_cc_number" name="payment[cc_number]" title="<?php echo $this->__('Credit Card Number') ?>" class="input-text validate-cc-number required-entry validate-cc-type" value="" />
+                      </div>
+                  </li>
+                  <li>
+                      <label for="<?php echo $_code ?>_cc_cid" ><em>*</em><?php echo $this->__('Card Verification Number') ?></label>
+                      <div class="input-box">
+                          <div class="v-fix">
+                              <input type="text" title="<?php echo $this->__('Card Verification Number') ?>" class="input-text cvv required-entry validate-cc-cvn" id="<?php echo $_code ?>_cc_cid" name="payment[cc_cid]" value="" />
+                          </div>
+                      </div>
+                  </li>
+                  <li>
+                      <label for="<?php echo $_code ?>_po_number" ><em>*</em><?php echo $this->__('Installment Number') ?></label>
+                      <div class="input-box">
+                          <select id="<?php echo $_code ?>_installment_number" name="payment[po_number]" class="required-entry">
+                            <?php
+                                $installmentsValue = $_standardPD->getInstallmentValuesPayU($totals->getData('grand_total'));
+                                for ($auxI = 1; $auxI <= sizeof($installmentsValue);$auxI++){
+                            ?>
+                            <option value="<?php echo $auxI;?>" ><?php echo $auxI . " x R$" . $installmentsValue[$auxI]?></option>
+                            <?php
+                                }
+                            ?>
+                          </select>
+                      </div>
+                  </li>
+                  <li>
+                      <label for="<?php echo $_code ?>_expiration" ><em>*</em><?php echo $this->__('Expiration Date') ?></label>
+                        <div class="input-box">
+                            <div class="v-fix">
+                                <select id="<?php echo $_code ?>_expiration" name="payment[cc_exp_month]" class="month validate-cc-exp required-entry">
+                                    <option value="01" >01 - Janeiro</option>
+                                    <option value="02" >02 - Fevereiro</option>
+                                    <option value="03" >03 - Março</option>
+                                    <option value="04" >04 - Abril</option>
+                                    <option value="05" >05 - Maio</option>
+                                    <option value="06" >06 - Junho</option>
+                                    <option value="07" >07 - Julho</option>
+                                    <option value="08" >08 - Agosto</option>
+                                    <option value="09" >09 - Setembro</option>
+                                    <option value="10" >10 - Outubro</option>
+                                    <option value="11" >11 - Novembro</option>
+                                    <option value="12" >12 - Dezembro</option>
+                                </select>
+                                
+                                <?php $_ccExpYear = date("Y"); ?>
+                                <select id="<?php echo $_code ?>_expiration_yr" name="payment[cc_exp_year]" class="year required-entry">
+                                <?php for ($i = $_ccExpYear; $i < $_ccExpYear + 7; $i++){ ?>
+                                    <option value="<?php echo $i; ?>" ><?php echo $i ?></option>
+                                <?php } ?>
+                                </select>
+                            </div>
+                        </div>
+                  </li>
+              </ul>
+          </li>
+        </ul>
+    </ul>
+</fieldset>

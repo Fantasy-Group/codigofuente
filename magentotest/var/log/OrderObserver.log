@@ -1,0 +1,575 @@
+2015-07-31T14:25:20+00:00 DEBUG (7): Notice: Use of undefined constant LOG_NAME - assumed 'LOG_NAME'  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Observer.php on line 13
+2015-07-31T14:27:08+00:00 DEBUG (7): Inventory model was found!
+2015-07-31T14:27:08+00:00 DEBUG (7): Notice: Use of undefined constant LOG_NAME - assumed 'LOG_NAME'  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Observer.php on line 18
+2015-07-31T14:27:41+00:00 DEBUG (7): Inventory model was found!
+2015-07-31T14:27:41+00:00 DEBUG (7): ORDER SAVED: [ID:100000048] - [STATUS:holded] - [DATE:2015-07-30 15:01:14]
+2015-07-31T14:38:14+00:00 DEBUG (7): Inventory model was found!
+2015-07-31T14:38:14+00:00 DEBUG (7): ORDER SAVED: [ID:100000048] - [STATUS:new] - [DATE:2015-07-30 15:01:14]
+2015-07-31T14:38:33+00:00 DEBUG (7): Inventory model was found!
+2015-07-31T14:38:33+00:00 DEBUG (7): ORDER SAVED: [ID:100000048] - [STATUS:processing] - [DATE:2015-07-30 15:01:14]
+2015-07-31T14:38:33+00:00 DEBUG (7): Order processed, order #: 100000048
+2015-07-31T14:38:33+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:43:58+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:43:58+00:00 DEBUG (7): ORDER SAVED: [ID:100000049] - [STATUS:] - [DATE:2015-08-19 19:43:58]
+2015-08-19T19:43:58+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:43:58+00:00 DEBUG (7): ORDER SAVED: [ID:100000049] - [STATUS:new] - [DATE:2015-08-19 19:43:58]
+2015-08-19T19:43:58+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:43:58+00:00 DEBUG (7): ORDER SAVED: [ID:100000049] - [STATUS:processing] - [DATE:2015-08-19 19:43:58]
+2015-08-19T19:43:58+00:00 DEBUG (7): Order processed, order #: 100000049
+2015-08-19T19:43:58+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:43:58+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:43:58+00:00 DEBUG (7): ORDER SAVED: [ID:100000049] - [STATUS:complete] - [DATE:2015-08-19 19:43:58]
+2015-08-19T19:43:58+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:43:58+00:00 DEBUG (7): ORDER SAVED: [ID:100000049] - [STATUS:complete] - [DATE:2015-08-19 19:43:58]
+2015-08-19T19:43:58+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:43:58+00:00 DEBUG (7): ORDER SAVED: [ID:100000050] - [STATUS:] - [DATE:2015-08-19 19:43:58]
+2015-08-19T19:43:58+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:43:58+00:00 DEBUG (7): ORDER SAVED: [ID:100000050] - [STATUS:new] - [DATE:2015-08-19 19:43:58]
+2015-08-19T19:43:58+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:43:58+00:00 DEBUG (7): ORDER SAVED: [ID:100000050] - [STATUS:processing] - [DATE:2015-08-19 19:43:58]
+2015-08-19T19:43:58+00:00 DEBUG (7): Order processed, order #: 100000050
+2015-08-19T19:43:58+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:43:58+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:43:58+00:00 DEBUG (7): ORDER SAVED: [ID:100000050] - [STATUS:complete] - [DATE:2015-08-19 19:43:58]
+2015-08-19T19:43:58+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:43:58+00:00 DEBUG (7): ORDER SAVED: [ID:100000050] - [STATUS:complete] - [DATE:2015-08-19 19:43:58]
+2015-08-19T19:43:59+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:43:59+00:00 DEBUG (7): ORDER SAVED: [ID:100000051] - [STATUS:] - [DATE:2015-08-19 19:43:59]
+2015-08-19T19:43:59+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:43:59+00:00 DEBUG (7): ORDER SAVED: [ID:100000051] - [STATUS:new] - [DATE:2015-08-19 19:43:59]
+2015-08-19T19:43:59+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:43:59+00:00 DEBUG (7): ORDER SAVED: [ID:100000051] - [STATUS:processing] - [DATE:2015-08-19 19:43:59]
+2015-08-19T19:43:59+00:00 DEBUG (7): Order processed, order #: 100000051
+2015-08-19T19:43:59+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:43:59+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:43:59+00:00 DEBUG (7): ORDER SAVED: [ID:100000051] - [STATUS:complete] - [DATE:2015-08-19 19:43:59]
+2015-08-19T19:43:59+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:43:59+00:00 DEBUG (7): ORDER SAVED: [ID:100000051] - [STATUS:complete] - [DATE:2015-08-19 19:43:59]
+2015-08-19T19:43:59+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:43:59+00:00 DEBUG (7): ORDER SAVED: [ID:100000052] - [STATUS:] - [DATE:2015-08-19 19:43:59]
+2015-08-19T19:43:59+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:43:59+00:00 DEBUG (7): ORDER SAVED: [ID:100000052] - [STATUS:new] - [DATE:2015-08-19 19:43:59]
+2015-08-19T19:43:59+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:43:59+00:00 DEBUG (7): ORDER SAVED: [ID:100000052] - [STATUS:processing] - [DATE:2015-08-19 19:43:59]
+2015-08-19T19:43:59+00:00 DEBUG (7): Order processed, order #: 100000052
+2015-08-19T19:43:59+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:43:59+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:43:59+00:00 DEBUG (7): ORDER SAVED: [ID:100000052] - [STATUS:complete] - [DATE:2015-08-19 19:43:59]
+2015-08-19T19:43:59+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:43:59+00:00 DEBUG (7): ORDER SAVED: [ID:100000052] - [STATUS:complete] - [DATE:2015-08-19 19:43:59]
+2015-08-19T19:44:00+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:00+00:00 DEBUG (7): ORDER SAVED: [ID:100000053] - [STATUS:] - [DATE:2015-08-19 19:44:00]
+2015-08-19T19:44:00+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:00+00:00 DEBUG (7): ORDER SAVED: [ID:100000053] - [STATUS:new] - [DATE:2015-08-19 19:44:00]
+2015-08-19T19:44:00+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:00+00:00 DEBUG (7): ORDER SAVED: [ID:100000053] - [STATUS:processing] - [DATE:2015-08-19 19:44:00]
+2015-08-19T19:44:00+00:00 DEBUG (7): Order processed, order #: 100000053
+2015-08-19T19:44:00+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:44:00+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:00+00:00 DEBUG (7): ORDER SAVED: [ID:100000053] - [STATUS:complete] - [DATE:2015-08-19 19:44:00]
+2015-08-19T19:44:00+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:00+00:00 DEBUG (7): ORDER SAVED: [ID:100000053] - [STATUS:complete] - [DATE:2015-08-19 19:44:00]
+2015-08-19T19:44:00+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:00+00:00 DEBUG (7): ORDER SAVED: [ID:100000054] - [STATUS:] - [DATE:2015-08-19 19:44:00]
+2015-08-19T19:44:00+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:00+00:00 DEBUG (7): ORDER SAVED: [ID:100000054] - [STATUS:new] - [DATE:2015-08-19 19:44:00]
+2015-08-19T19:44:00+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:00+00:00 DEBUG (7): ORDER SAVED: [ID:100000054] - [STATUS:processing] - [DATE:2015-08-19 19:44:00]
+2015-08-19T19:44:00+00:00 DEBUG (7): Order processed, order #: 100000054
+2015-08-19T19:44:00+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:44:00+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:00+00:00 DEBUG (7): ORDER SAVED: [ID:100000054] - [STATUS:complete] - [DATE:2015-08-19 19:44:00]
+2015-08-19T19:44:00+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:00+00:00 DEBUG (7): ORDER SAVED: [ID:100000054] - [STATUS:complete] - [DATE:2015-08-19 19:44:00]
+2015-08-19T19:44:01+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:01+00:00 DEBUG (7): ORDER SAVED: [ID:100000055] - [STATUS:] - [DATE:2015-08-19 19:44:01]
+2015-08-19T19:44:01+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:01+00:00 DEBUG (7): ORDER SAVED: [ID:100000055] - [STATUS:new] - [DATE:2015-08-19 19:44:01]
+2015-08-19T19:44:01+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:01+00:00 DEBUG (7): ORDER SAVED: [ID:100000055] - [STATUS:processing] - [DATE:2015-08-19 19:44:01]
+2015-08-19T19:44:01+00:00 DEBUG (7): Order processed, order #: 100000055
+2015-08-19T19:44:01+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:44:01+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:01+00:00 DEBUG (7): ORDER SAVED: [ID:100000055] - [STATUS:complete] - [DATE:2015-08-19 19:44:01]
+2015-08-19T19:44:01+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:01+00:00 DEBUG (7): ORDER SAVED: [ID:100000055] - [STATUS:complete] - [DATE:2015-08-19 19:44:01]
+2015-08-19T19:44:01+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:01+00:00 DEBUG (7): ORDER SAVED: [ID:100000056] - [STATUS:] - [DATE:2015-08-19 19:44:01]
+2015-08-19T19:44:01+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:01+00:00 DEBUG (7): ORDER SAVED: [ID:100000056] - [STATUS:] - [DATE:2015-08-19 19:44:01]
+2015-08-19T19:44:01+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:01+00:00 DEBUG (7): ORDER SAVED: [ID:100000056] - [STATUS:new] - [DATE:2015-08-19 19:44:01]
+2015-08-19T19:44:02+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:02+00:00 DEBUG (7): ORDER SAVED: [ID:100000056] - [STATUS:processing] - [DATE:2015-08-19 19:44:01]
+2015-08-19T19:44:02+00:00 DEBUG (7): Order processed, order #: 100000056
+2015-08-19T19:44:02+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:44:02+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:02+00:00 DEBUG (7): ORDER SAVED: [ID:100000056] - [STATUS:complete] - [DATE:2015-08-19 19:44:01]
+2015-08-19T19:44:02+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:02+00:00 DEBUG (7): ORDER SAVED: [ID:100000056] - [STATUS:complete] - [DATE:2015-08-19 19:44:01]
+2015-08-19T19:44:02+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:02+00:00 DEBUG (7): ORDER SAVED: [ID:100000057] - [STATUS:] - [DATE:2015-08-19 19:44:02]
+2015-08-19T19:44:02+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:02+00:00 DEBUG (7): ORDER SAVED: [ID:100000057] - [STATUS:new] - [DATE:2015-08-19 19:44:02]
+2015-08-19T19:44:02+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:02+00:00 DEBUG (7): ORDER SAVED: [ID:100000057] - [STATUS:processing] - [DATE:2015-08-19 19:44:02]
+2015-08-19T19:44:02+00:00 DEBUG (7): Order processed, order #: 100000057
+2015-08-19T19:44:02+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:44:02+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:02+00:00 DEBUG (7): ORDER SAVED: [ID:100000057] - [STATUS:complete] - [DATE:2015-08-19 19:44:02]
+2015-08-19T19:44:02+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:02+00:00 DEBUG (7): ORDER SAVED: [ID:100000057] - [STATUS:complete] - [DATE:2015-08-19 19:44:02]
+2015-08-19T19:44:02+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:02+00:00 DEBUG (7): ORDER SAVED: [ID:100000058] - [STATUS:] - [DATE:2015-08-19 19:44:02]
+2015-08-19T19:44:03+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:03+00:00 DEBUG (7): ORDER SAVED: [ID:100000058] - [STATUS:new] - [DATE:2015-08-19 19:44:02]
+2015-08-19T19:44:03+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:03+00:00 DEBUG (7): ORDER SAVED: [ID:100000058] - [STATUS:processing] - [DATE:2015-08-19 19:44:02]
+2015-08-19T19:44:03+00:00 DEBUG (7): Order processed, order #: 100000058
+2015-08-19T19:44:03+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:44:03+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:03+00:00 DEBUG (7): ORDER SAVED: [ID:100000058] - [STATUS:complete] - [DATE:2015-08-19 19:44:02]
+2015-08-19T19:44:03+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:03+00:00 DEBUG (7): ORDER SAVED: [ID:100000058] - [STATUS:complete] - [DATE:2015-08-19 19:44:02]
+2015-08-19T19:44:04+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:04+00:00 DEBUG (7): ORDER SAVED: [ID:100000059] - [STATUS:] - [DATE:2015-08-19 19:44:04]
+2015-08-19T19:44:04+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:04+00:00 DEBUG (7): ORDER SAVED: [ID:100000059] - [STATUS:new] - [DATE:2015-08-19 19:44:04]
+2015-08-19T19:44:04+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:04+00:00 DEBUG (7): ORDER SAVED: [ID:100000059] - [STATUS:processing] - [DATE:2015-08-19 19:44:04]
+2015-08-19T19:44:04+00:00 DEBUG (7): Order processed, order #: 100000059
+2015-08-19T19:44:04+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:44:04+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:04+00:00 DEBUG (7): ORDER SAVED: [ID:100000059] - [STATUS:complete] - [DATE:2015-08-19 19:44:04]
+2015-08-19T19:44:04+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:04+00:00 DEBUG (7): ORDER SAVED: [ID:100000059] - [STATUS:complete] - [DATE:2015-08-19 19:44:04]
+2015-08-19T19:44:04+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:04+00:00 DEBUG (7): ORDER SAVED: [ID:100000060] - [STATUS:] - [DATE:2015-08-19 19:44:04]
+2015-08-19T19:44:04+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:04+00:00 DEBUG (7): ORDER SAVED: [ID:100000060] - [STATUS:] - [DATE:2015-08-19 19:44:04]
+2015-08-19T19:44:04+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:04+00:00 DEBUG (7): ORDER SAVED: [ID:100000060] - [STATUS:new] - [DATE:2015-08-19 19:44:04]
+2015-08-19T19:44:04+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:04+00:00 DEBUG (7): ORDER SAVED: [ID:100000060] - [STATUS:processing] - [DATE:2015-08-19 19:44:04]
+2015-08-19T19:44:04+00:00 DEBUG (7): Order processed, order #: 100000060
+2015-08-19T19:44:04+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:44:04+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:04+00:00 DEBUG (7): ORDER SAVED: [ID:100000060] - [STATUS:complete] - [DATE:2015-08-19 19:44:04]
+2015-08-19T19:44:04+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:04+00:00 DEBUG (7): ORDER SAVED: [ID:100000060] - [STATUS:complete] - [DATE:2015-08-19 19:44:04]
+2015-08-19T19:44:05+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:05+00:00 DEBUG (7): ORDER SAVED: [ID:100000061] - [STATUS:] - [DATE:2015-08-19 19:44:05]
+2015-08-19T19:44:05+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:05+00:00 DEBUG (7): ORDER SAVED: [ID:100000061] - [STATUS:new] - [DATE:2015-08-19 19:44:05]
+2015-08-19T19:44:05+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:05+00:00 DEBUG (7): ORDER SAVED: [ID:100000061] - [STATUS:processing] - [DATE:2015-08-19 19:44:05]
+2015-08-19T19:44:05+00:00 DEBUG (7): Order processed, order #: 100000061
+2015-08-19T19:44:05+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:44:05+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:05+00:00 DEBUG (7): ORDER SAVED: [ID:100000061] - [STATUS:complete] - [DATE:2015-08-19 19:44:05]
+2015-08-19T19:44:05+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:05+00:00 DEBUG (7): ORDER SAVED: [ID:100000061] - [STATUS:complete] - [DATE:2015-08-19 19:44:05]
+2015-08-19T19:44:05+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:05+00:00 DEBUG (7): ORDER SAVED: [ID:100000062] - [STATUS:] - [DATE:2015-08-19 19:44:05]
+2015-08-19T19:44:05+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:05+00:00 DEBUG (7): ORDER SAVED: [ID:100000062] - [STATUS:new] - [DATE:2015-08-19 19:44:05]
+2015-08-19T19:44:05+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:05+00:00 DEBUG (7): ORDER SAVED: [ID:100000062] - [STATUS:processing] - [DATE:2015-08-19 19:44:05]
+2015-08-19T19:44:05+00:00 DEBUG (7): Order processed, order #: 100000062
+2015-08-19T19:44:05+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:44:05+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:05+00:00 DEBUG (7): ORDER SAVED: [ID:100000062] - [STATUS:complete] - [DATE:2015-08-19 19:44:05]
+2015-08-19T19:44:05+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:05+00:00 DEBUG (7): ORDER SAVED: [ID:100000062] - [STATUS:complete] - [DATE:2015-08-19 19:44:05]
+2015-08-19T19:44:06+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:06+00:00 DEBUG (7): ORDER SAVED: [ID:100000063] - [STATUS:] - [DATE:2015-08-19 19:44:06]
+2015-08-19T19:44:06+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:06+00:00 DEBUG (7): ORDER SAVED: [ID:100000063] - [STATUS:new] - [DATE:2015-08-19 19:44:06]
+2015-08-19T19:44:06+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:06+00:00 DEBUG (7): ORDER SAVED: [ID:100000063] - [STATUS:processing] - [DATE:2015-08-19 19:44:06]
+2015-08-19T19:44:06+00:00 DEBUG (7): Order processed, order #: 100000063
+2015-08-19T19:44:06+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:44:06+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:06+00:00 DEBUG (7): ORDER SAVED: [ID:100000063] - [STATUS:complete] - [DATE:2015-08-19 19:44:06]
+2015-08-19T19:44:06+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:06+00:00 DEBUG (7): ORDER SAVED: [ID:100000063] - [STATUS:complete] - [DATE:2015-08-19 19:44:06]
+2015-08-19T19:44:06+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:06+00:00 DEBUG (7): ORDER SAVED: [ID:100000064] - [STATUS:] - [DATE:2015-08-19 19:44:06]
+2015-08-19T19:44:06+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:06+00:00 DEBUG (7): ORDER SAVED: [ID:100000064] - [STATUS:new] - [DATE:2015-08-19 19:44:06]
+2015-08-19T19:44:06+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:06+00:00 DEBUG (7): ORDER SAVED: [ID:100000064] - [STATUS:processing] - [DATE:2015-08-19 19:44:06]
+2015-08-19T19:44:06+00:00 DEBUG (7): Order processed, order #: 100000064
+2015-08-19T19:44:06+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:44:06+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:06+00:00 DEBUG (7): ORDER SAVED: [ID:100000064] - [STATUS:complete] - [DATE:2015-08-19 19:44:06]
+2015-08-19T19:44:06+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:06+00:00 DEBUG (7): ORDER SAVED: [ID:100000064] - [STATUS:complete] - [DATE:2015-08-19 19:44:06]
+2015-08-19T19:44:07+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:07+00:00 DEBUG (7): ORDER SAVED: [ID:100000065] - [STATUS:] - [DATE:2015-08-19 19:44:07]
+2015-08-19T19:44:07+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:07+00:00 DEBUG (7): ORDER SAVED: [ID:100000065] - [STATUS:new] - [DATE:2015-08-19 19:44:07]
+2015-08-19T19:44:07+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:07+00:00 DEBUG (7): ORDER SAVED: [ID:100000065] - [STATUS:processing] - [DATE:2015-08-19 19:44:07]
+2015-08-19T19:44:07+00:00 DEBUG (7): Order processed, order #: 100000065
+2015-08-19T19:44:07+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:44:07+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:07+00:00 DEBUG (7): ORDER SAVED: [ID:100000065] - [STATUS:complete] - [DATE:2015-08-19 19:44:07]
+2015-08-19T19:44:07+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:07+00:00 DEBUG (7): ORDER SAVED: [ID:100000065] - [STATUS:complete] - [DATE:2015-08-19 19:44:07]
+2015-08-19T19:44:07+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:07+00:00 DEBUG (7): ORDER SAVED: [ID:100000066] - [STATUS:] - [DATE:2015-08-19 19:44:07]
+2015-08-19T19:44:07+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:07+00:00 DEBUG (7): ORDER SAVED: [ID:100000066] - [STATUS:new] - [DATE:2015-08-19 19:44:07]
+2015-08-19T19:44:07+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:07+00:00 DEBUG (7): ORDER SAVED: [ID:100000066] - [STATUS:processing] - [DATE:2015-08-19 19:44:07]
+2015-08-19T19:44:07+00:00 DEBUG (7): Order processed, order #: 100000066
+2015-08-19T19:44:07+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:44:07+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:07+00:00 DEBUG (7): ORDER SAVED: [ID:100000066] - [STATUS:complete] - [DATE:2015-08-19 19:44:07]
+2015-08-19T19:44:07+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:07+00:00 DEBUG (7): ORDER SAVED: [ID:100000066] - [STATUS:complete] - [DATE:2015-08-19 19:44:07]
+2015-08-19T19:44:08+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:08+00:00 DEBUG (7): ORDER SAVED: [ID:100000067] - [STATUS:] - [DATE:2015-08-19 19:44:08]
+2015-08-19T19:44:08+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:08+00:00 DEBUG (7): ORDER SAVED: [ID:100000067] - [STATUS:new] - [DATE:2015-08-19 19:44:08]
+2015-08-19T19:44:08+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:08+00:00 DEBUG (7): ORDER SAVED: [ID:100000067] - [STATUS:processing] - [DATE:2015-08-19 19:44:08]
+2015-08-19T19:44:08+00:00 DEBUG (7): Order processed, order #: 100000067
+2015-08-19T19:44:08+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:44:08+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:08+00:00 DEBUG (7): ORDER SAVED: [ID:100000067] - [STATUS:complete] - [DATE:2015-08-19 19:44:08]
+2015-08-19T19:44:08+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:08+00:00 DEBUG (7): ORDER SAVED: [ID:100000067] - [STATUS:complete] - [DATE:2015-08-19 19:44:08]
+2015-08-19T19:44:08+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:08+00:00 DEBUG (7): ORDER SAVED: [ID:100000068] - [STATUS:] - [DATE:2015-08-19 19:44:08]
+2015-08-19T19:44:08+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:08+00:00 DEBUG (7): ORDER SAVED: [ID:100000068] - [STATUS:new] - [DATE:2015-08-19 19:44:08]
+2015-08-19T19:44:08+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:08+00:00 DEBUG (7): ORDER SAVED: [ID:100000068] - [STATUS:processing] - [DATE:2015-08-19 19:44:08]
+2015-08-19T19:44:08+00:00 DEBUG (7): Order processed, order #: 100000068
+2015-08-19T19:44:08+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:44:08+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:08+00:00 DEBUG (7): ORDER SAVED: [ID:100000068] - [STATUS:complete] - [DATE:2015-08-19 19:44:08]
+2015-08-19T19:44:08+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:08+00:00 DEBUG (7): ORDER SAVED: [ID:100000068] - [STATUS:complete] - [DATE:2015-08-19 19:44:08]
+2015-08-19T19:44:08+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:08+00:00 DEBUG (7): ORDER SAVED: [ID:100000069] - [STATUS:] - [DATE:2015-08-19 19:44:08]
+2015-08-19T19:44:08+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:08+00:00 DEBUG (7): ORDER SAVED: [ID:100000069] - [STATUS:new] - [DATE:2015-08-19 19:44:08]
+2015-08-19T19:44:09+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:09+00:00 DEBUG (7): ORDER SAVED: [ID:100000069] - [STATUS:processing] - [DATE:2015-08-19 19:44:08]
+2015-08-19T19:44:09+00:00 DEBUG (7): Order processed, order #: 100000069
+2015-08-19T19:44:09+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:44:09+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:09+00:00 DEBUG (7): ORDER SAVED: [ID:100000069] - [STATUS:complete] - [DATE:2015-08-19 19:44:08]
+2015-08-19T19:44:09+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:09+00:00 DEBUG (7): ORDER SAVED: [ID:100000069] - [STATUS:complete] - [DATE:2015-08-19 19:44:08]
+2015-08-19T19:44:09+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:09+00:00 DEBUG (7): ORDER SAVED: [ID:100000070] - [STATUS:] - [DATE:2015-08-19 19:44:09]
+2015-08-19T19:44:09+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:09+00:00 DEBUG (7): ORDER SAVED: [ID:100000070] - [STATUS:new] - [DATE:2015-08-19 19:44:09]
+2015-08-19T19:44:09+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:09+00:00 DEBUG (7): ORDER SAVED: [ID:100000070] - [STATUS:processing] - [DATE:2015-08-19 19:44:09]
+2015-08-19T19:44:09+00:00 DEBUG (7): Order processed, order #: 100000070
+2015-08-19T19:44:09+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:44:09+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:09+00:00 DEBUG (7): ORDER SAVED: [ID:100000070] - [STATUS:complete] - [DATE:2015-08-19 19:44:09]
+2015-08-19T19:44:09+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:09+00:00 DEBUG (7): ORDER SAVED: [ID:100000070] - [STATUS:complete] - [DATE:2015-08-19 19:44:09]
+2015-08-19T19:44:09+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:09+00:00 DEBUG (7): ORDER SAVED: [ID:100000071] - [STATUS:] - [DATE:2015-08-19 19:44:09]
+2015-08-19T19:44:09+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:09+00:00 DEBUG (7): ORDER SAVED: [ID:100000071] - [STATUS:new] - [DATE:2015-08-19 19:44:09]
+2015-08-19T19:44:10+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:10+00:00 DEBUG (7): ORDER SAVED: [ID:100000071] - [STATUS:processing] - [DATE:2015-08-19 19:44:09]
+2015-08-19T19:44:10+00:00 DEBUG (7): Order processed, order #: 100000071
+2015-08-19T19:44:10+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:44:10+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:10+00:00 DEBUG (7): ORDER SAVED: [ID:100000071] - [STATUS:complete] - [DATE:2015-08-19 19:44:09]
+2015-08-19T19:44:10+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:10+00:00 DEBUG (7): ORDER SAVED: [ID:100000071] - [STATUS:complete] - [DATE:2015-08-19 19:44:09]
+2015-08-19T19:44:10+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:10+00:00 DEBUG (7): ORDER SAVED: [ID:100000072] - [STATUS:] - [DATE:2015-08-19 19:44:10]
+2015-08-19T19:44:10+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:10+00:00 DEBUG (7): ORDER SAVED: [ID:100000072] - [STATUS:new] - [DATE:2015-08-19 19:44:10]
+2015-08-19T19:44:10+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:10+00:00 DEBUG (7): ORDER SAVED: [ID:100000072] - [STATUS:processing] - [DATE:2015-08-19 19:44:10]
+2015-08-19T19:44:10+00:00 DEBUG (7): Order processed, order #: 100000072
+2015-08-19T19:44:10+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:44:10+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:10+00:00 DEBUG (7): ORDER SAVED: [ID:100000072] - [STATUS:complete] - [DATE:2015-08-19 19:44:10]
+2015-08-19T19:44:10+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:10+00:00 DEBUG (7): ORDER SAVED: [ID:100000072] - [STATUS:complete] - [DATE:2015-08-19 19:44:10]
+2015-08-19T19:44:10+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:10+00:00 DEBUG (7): ORDER SAVED: [ID:100000073] - [STATUS:] - [DATE:2015-08-19 19:44:10]
+2015-08-19T19:44:10+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:10+00:00 DEBUG (7): ORDER SAVED: [ID:100000073] - [STATUS:new] - [DATE:2015-08-19 19:44:10]
+2015-08-19T19:44:11+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:11+00:00 DEBUG (7): ORDER SAVED: [ID:100000073] - [STATUS:processing] - [DATE:2015-08-19 19:44:10]
+2015-08-19T19:44:11+00:00 DEBUG (7): Order processed, order #: 100000073
+2015-08-19T19:44:11+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:44:11+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:11+00:00 DEBUG (7): ORDER SAVED: [ID:100000073] - [STATUS:complete] - [DATE:2015-08-19 19:44:10]
+2015-08-19T19:44:11+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:11+00:00 DEBUG (7): ORDER SAVED: [ID:100000073] - [STATUS:complete] - [DATE:2015-08-19 19:44:10]
+2015-08-19T19:44:11+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:11+00:00 DEBUG (7): ORDER SAVED: [ID:100000074] - [STATUS:] - [DATE:2015-08-19 19:44:11]
+2015-08-19T19:44:11+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:11+00:00 DEBUG (7): ORDER SAVED: [ID:100000074] - [STATUS:new] - [DATE:2015-08-19 19:44:11]
+2015-08-19T19:44:11+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:11+00:00 DEBUG (7): ORDER SAVED: [ID:100000074] - [STATUS:processing] - [DATE:2015-08-19 19:44:11]
+2015-08-19T19:44:11+00:00 DEBUG (7): Order processed, order #: 100000074
+2015-08-19T19:44:11+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:44:11+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:11+00:00 DEBUG (7): ORDER SAVED: [ID:100000074] - [STATUS:complete] - [DATE:2015-08-19 19:44:11]
+2015-08-19T19:44:11+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:11+00:00 DEBUG (7): ORDER SAVED: [ID:100000074] - [STATUS:complete] - [DATE:2015-08-19 19:44:11]
+2015-08-19T19:44:11+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:11+00:00 DEBUG (7): ORDER SAVED: [ID:100000075] - [STATUS:] - [DATE:2015-08-19 19:44:11]
+2015-08-19T19:44:11+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:11+00:00 DEBUG (7): ORDER SAVED: [ID:100000075] - [STATUS:new] - [DATE:2015-08-19 19:44:11]
+2015-08-19T19:44:11+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:11+00:00 DEBUG (7): ORDER SAVED: [ID:100000075] - [STATUS:processing] - [DATE:2015-08-19 19:44:11]
+2015-08-19T19:44:11+00:00 DEBUG (7): Order processed, order #: 100000075
+2015-08-19T19:44:11+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:44:11+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:11+00:00 DEBUG (7): ORDER SAVED: [ID:100000075] - [STATUS:complete] - [DATE:2015-08-19 19:44:11]
+2015-08-19T19:44:11+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:11+00:00 DEBUG (7): ORDER SAVED: [ID:100000075] - [STATUS:complete] - [DATE:2015-08-19 19:44:11]
+2015-08-19T19:44:12+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:12+00:00 DEBUG (7): ORDER SAVED: [ID:100000076] - [STATUS:] - [DATE:2015-08-19 19:44:12]
+2015-08-19T19:44:12+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:12+00:00 DEBUG (7): ORDER SAVED: [ID:100000076] - [STATUS:new] - [DATE:2015-08-19 19:44:12]
+2015-08-19T19:44:12+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:12+00:00 DEBUG (7): ORDER SAVED: [ID:100000076] - [STATUS:processing] - [DATE:2015-08-19 19:44:12]
+2015-08-19T19:44:12+00:00 DEBUG (7): Order processed, order #: 100000076
+2015-08-19T19:44:12+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:44:12+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:12+00:00 DEBUG (7): ORDER SAVED: [ID:100000076] - [STATUS:complete] - [DATE:2015-08-19 19:44:12]
+2015-08-19T19:44:12+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:12+00:00 DEBUG (7): ORDER SAVED: [ID:100000076] - [STATUS:complete] - [DATE:2015-08-19 19:44:12]
+2015-08-19T19:44:12+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:12+00:00 DEBUG (7): ORDER SAVED: [ID:100000077] - [STATUS:] - [DATE:2015-08-19 19:44:12]
+2015-08-19T19:44:12+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:12+00:00 DEBUG (7): ORDER SAVED: [ID:100000077] - [STATUS:new] - [DATE:2015-08-19 19:44:12]
+2015-08-19T19:44:12+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:12+00:00 DEBUG (7): ORDER SAVED: [ID:100000077] - [STATUS:processing] - [DATE:2015-08-19 19:44:12]
+2015-08-19T19:44:12+00:00 DEBUG (7): Order processed, order #: 100000077
+2015-08-19T19:44:12+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:44:12+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:12+00:00 DEBUG (7): ORDER SAVED: [ID:100000077] - [STATUS:complete] - [DATE:2015-08-19 19:44:12]
+2015-08-19T19:44:12+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:12+00:00 DEBUG (7): ORDER SAVED: [ID:100000077] - [STATUS:complete] - [DATE:2015-08-19 19:44:12]
+2015-08-19T19:44:13+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:13+00:00 DEBUG (7): ORDER SAVED: [ID:100000078] - [STATUS:] - [DATE:2015-08-19 19:44:13]
+2015-08-19T19:44:13+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:13+00:00 DEBUG (7): ORDER SAVED: [ID:100000078] - [STATUS:new] - [DATE:2015-08-19 19:44:13]
+2015-08-19T19:44:13+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:13+00:00 DEBUG (7): ORDER SAVED: [ID:100000078] - [STATUS:processing] - [DATE:2015-08-19 19:44:13]
+2015-08-19T19:44:13+00:00 DEBUG (7): Order processed, order #: 100000078
+2015-08-19T19:44:13+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:44:13+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:13+00:00 DEBUG (7): ORDER SAVED: [ID:100000078] - [STATUS:complete] - [DATE:2015-08-19 19:44:13]
+2015-08-19T19:44:13+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:13+00:00 DEBUG (7): ORDER SAVED: [ID:100000078] - [STATUS:complete] - [DATE:2015-08-19 19:44:13]
+2015-08-19T19:44:14+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:14+00:00 DEBUG (7): ORDER SAVED: [ID:100000079] - [STATUS:] - [DATE:2015-08-19 19:44:14]
+2015-08-19T19:44:14+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:14+00:00 DEBUG (7): ORDER SAVED: [ID:100000079] - [STATUS:new] - [DATE:2015-08-19 19:44:14]
+2015-08-19T19:44:16+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:16+00:00 DEBUG (7): ORDER SAVED: [ID:100000079] - [STATUS:processing] - [DATE:2015-08-19 19:44:14]
+2015-08-19T19:44:16+00:00 DEBUG (7): Order processed, order #: 100000079
+2015-08-19T19:44:16+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:44:16+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:16+00:00 DEBUG (7): ORDER SAVED: [ID:100000079] - [STATUS:complete] - [DATE:2015-08-19 19:44:14]
+2015-08-19T19:44:16+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:44:16+00:00 DEBUG (7): ORDER SAVED: [ID:100000079] - [STATUS:complete] - [DATE:2015-08-19 19:44:14]
+2015-08-19T19:48:45+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:45+00:00 DEBUG (7): ORDER SAVED: [ID:100000080] - [STATUS:] - [DATE:2015-08-19 19:48:45]
+2015-08-19T19:48:45+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:45+00:00 DEBUG (7): ORDER SAVED: [ID:100000080] - [STATUS:new] - [DATE:2015-08-19 19:48:45]
+2015-08-19T19:48:45+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:45+00:00 DEBUG (7): ORDER SAVED: [ID:100000080] - [STATUS:processing] - [DATE:2015-08-19 19:48:45]
+2015-08-19T19:48:45+00:00 DEBUG (7): Order processed, order #: 100000080
+2015-08-19T19:48:45+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:48:45+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:45+00:00 DEBUG (7): ORDER SAVED: [ID:100000080] - [STATUS:complete] - [DATE:2015-08-19 19:48:45]
+2015-08-19T19:48:45+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:45+00:00 DEBUG (7): ORDER SAVED: [ID:100000080] - [STATUS:complete] - [DATE:2015-08-19 19:48:45]
+2015-08-19T19:48:45+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:45+00:00 DEBUG (7): ORDER SAVED: [ID:100000081] - [STATUS:] - [DATE:2015-08-19 19:48:45]
+2015-08-19T19:48:45+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:45+00:00 DEBUG (7): ORDER SAVED: [ID:100000081] - [STATUS:new] - [DATE:2015-08-19 19:48:45]
+2015-08-19T19:48:46+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:46+00:00 DEBUG (7): ORDER SAVED: [ID:100000081] - [STATUS:processing] - [DATE:2015-08-19 19:48:45]
+2015-08-19T19:48:46+00:00 DEBUG (7): Order processed, order #: 100000081
+2015-08-19T19:48:46+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:48:46+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:46+00:00 DEBUG (7): ORDER SAVED: [ID:100000081] - [STATUS:complete] - [DATE:2015-08-19 19:48:45]
+2015-08-19T19:48:46+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:46+00:00 DEBUG (7): ORDER SAVED: [ID:100000081] - [STATUS:complete] - [DATE:2015-08-19 19:48:45]
+2015-08-19T19:48:46+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:46+00:00 DEBUG (7): ORDER SAVED: [ID:100000082] - [STATUS:] - [DATE:2015-08-19 19:48:46]
+2015-08-19T19:48:46+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:46+00:00 DEBUG (7): ORDER SAVED: [ID:100000082] - [STATUS:new] - [DATE:2015-08-19 19:48:46]
+2015-08-19T19:48:46+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:46+00:00 DEBUG (7): ORDER SAVED: [ID:100000082] - [STATUS:processing] - [DATE:2015-08-19 19:48:46]
+2015-08-19T19:48:46+00:00 DEBUG (7): Order processed, order #: 100000082
+2015-08-19T19:48:46+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:48:46+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:46+00:00 DEBUG (7): ORDER SAVED: [ID:100000082] - [STATUS:complete] - [DATE:2015-08-19 19:48:46]
+2015-08-19T19:48:46+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:46+00:00 DEBUG (7): ORDER SAVED: [ID:100000082] - [STATUS:complete] - [DATE:2015-08-19 19:48:46]
+2015-08-19T19:48:47+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:47+00:00 DEBUG (7): ORDER SAVED: [ID:100000083] - [STATUS:] - [DATE:2015-08-19 19:48:47]
+2015-08-19T19:48:47+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:47+00:00 DEBUG (7): ORDER SAVED: [ID:100000083] - [STATUS:new] - [DATE:2015-08-19 19:48:47]
+2015-08-19T19:48:47+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:47+00:00 DEBUG (7): ORDER SAVED: [ID:100000083] - [STATUS:processing] - [DATE:2015-08-19 19:48:47]
+2015-08-19T19:48:47+00:00 DEBUG (7): Order processed, order #: 100000083
+2015-08-19T19:48:47+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:48:47+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:47+00:00 DEBUG (7): ORDER SAVED: [ID:100000083] - [STATUS:complete] - [DATE:2015-08-19 19:48:47]
+2015-08-19T19:48:47+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:47+00:00 DEBUG (7): ORDER SAVED: [ID:100000083] - [STATUS:complete] - [DATE:2015-08-19 19:48:47]
+2015-08-19T19:48:47+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:47+00:00 DEBUG (7): ORDER SAVED: [ID:100000084] - [STATUS:] - [DATE:2015-08-19 19:48:47]
+2015-08-19T19:48:47+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:47+00:00 DEBUG (7): ORDER SAVED: [ID:100000084] - [STATUS:new] - [DATE:2015-08-19 19:48:47]
+2015-08-19T19:48:48+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:48+00:00 DEBUG (7): ORDER SAVED: [ID:100000084] - [STATUS:processing] - [DATE:2015-08-19 19:48:47]
+2015-08-19T19:48:48+00:00 DEBUG (7): Order processed, order #: 100000084
+2015-08-19T19:48:48+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:48:48+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:48+00:00 DEBUG (7): ORDER SAVED: [ID:100000084] - [STATUS:complete] - [DATE:2015-08-19 19:48:47]
+2015-08-19T19:48:48+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:48+00:00 DEBUG (7): ORDER SAVED: [ID:100000084] - [STATUS:complete] - [DATE:2015-08-19 19:48:47]
+2015-08-19T19:48:49+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:49+00:00 DEBUG (7): ORDER SAVED: [ID:100000085] - [STATUS:] - [DATE:2015-08-19 19:48:49]
+2015-08-19T19:48:49+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:49+00:00 DEBUG (7): ORDER SAVED: [ID:100000085] - [STATUS:new] - [DATE:2015-08-19 19:48:49]
+2015-08-19T19:48:49+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:49+00:00 DEBUG (7): ORDER SAVED: [ID:100000085] - [STATUS:processing] - [DATE:2015-08-19 19:48:49]
+2015-08-19T19:48:49+00:00 DEBUG (7): Order processed, order #: 100000085
+2015-08-19T19:48:49+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:48:49+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:49+00:00 DEBUG (7): ORDER SAVED: [ID:100000085] - [STATUS:complete] - [DATE:2015-08-19 19:48:49]
+2015-08-19T19:48:49+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:49+00:00 DEBUG (7): ORDER SAVED: [ID:100000085] - [STATUS:complete] - [DATE:2015-08-19 19:48:49]
+2015-08-19T19:48:49+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:49+00:00 DEBUG (7): ORDER SAVED: [ID:100000086] - [STATUS:] - [DATE:2015-08-19 19:48:49]
+2015-08-19T19:48:49+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:49+00:00 DEBUG (7): ORDER SAVED: [ID:100000086] - [STATUS:new] - [DATE:2015-08-19 19:48:49]
+2015-08-19T19:48:49+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:49+00:00 DEBUG (7): ORDER SAVED: [ID:100000086] - [STATUS:processing] - [DATE:2015-08-19 19:48:49]
+2015-08-19T19:48:49+00:00 DEBUG (7): Order processed, order #: 100000086
+2015-08-19T19:48:49+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:48:49+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:49+00:00 DEBUG (7): ORDER SAVED: [ID:100000086] - [STATUS:complete] - [DATE:2015-08-19 19:48:49]
+2015-08-19T19:48:49+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:49+00:00 DEBUG (7): ORDER SAVED: [ID:100000086] - [STATUS:complete] - [DATE:2015-08-19 19:48:49]
+2015-08-19T19:48:50+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:50+00:00 DEBUG (7): ORDER SAVED: [ID:100000087] - [STATUS:] - [DATE:2015-08-19 19:48:50]
+2015-08-19T19:48:50+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:50+00:00 DEBUG (7): ORDER SAVED: [ID:100000087] - [STATUS:new] - [DATE:2015-08-19 19:48:50]
+2015-08-19T19:48:50+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:50+00:00 DEBUG (7): ORDER SAVED: [ID:100000087] - [STATUS:processing] - [DATE:2015-08-19 19:48:50]
+2015-08-19T19:48:50+00:00 DEBUG (7): Order processed, order #: 100000087
+2015-08-19T19:48:50+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:48:50+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:50+00:00 DEBUG (7): ORDER SAVED: [ID:100000087] - [STATUS:complete] - [DATE:2015-08-19 19:48:50]
+2015-08-19T19:48:50+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:50+00:00 DEBUG (7): ORDER SAVED: [ID:100000087] - [STATUS:complete] - [DATE:2015-08-19 19:48:50]
+2015-08-19T19:48:50+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:50+00:00 DEBUG (7): ORDER SAVED: [ID:100000088] - [STATUS:] - [DATE:2015-08-19 19:48:50]
+2015-08-19T19:48:50+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:50+00:00 DEBUG (7): ORDER SAVED: [ID:100000088] - [STATUS:new] - [DATE:2015-08-19 19:48:50]
+2015-08-19T19:48:50+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:50+00:00 DEBUG (7): ORDER SAVED: [ID:100000088] - [STATUS:processing] - [DATE:2015-08-19 19:48:50]
+2015-08-19T19:48:50+00:00 DEBUG (7): Order processed, order #: 100000088
+2015-08-19T19:48:50+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:48:50+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:50+00:00 DEBUG (7): ORDER SAVED: [ID:100000088] - [STATUS:complete] - [DATE:2015-08-19 19:48:50]
+2015-08-19T19:48:50+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:50+00:00 DEBUG (7): ORDER SAVED: [ID:100000088] - [STATUS:complete] - [DATE:2015-08-19 19:48:50]
+2015-08-19T19:48:51+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:51+00:00 DEBUG (7): ORDER SAVED: [ID:100000089] - [STATUS:] - [DATE:2015-08-19 19:48:51]
+2015-08-19T19:48:51+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:51+00:00 DEBUG (7): ORDER SAVED: [ID:100000089] - [STATUS:new] - [DATE:2015-08-19 19:48:51]
+2015-08-19T19:48:51+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:51+00:00 DEBUG (7): ORDER SAVED: [ID:100000089] - [STATUS:processing] - [DATE:2015-08-19 19:48:51]
+2015-08-19T19:48:51+00:00 DEBUG (7): Order processed, order #: 100000089
+2015-08-19T19:48:51+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:48:51+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:51+00:00 DEBUG (7): ORDER SAVED: [ID:100000089] - [STATUS:complete] - [DATE:2015-08-19 19:48:51]
+2015-08-19T19:48:51+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:51+00:00 DEBUG (7): ORDER SAVED: [ID:100000089] - [STATUS:complete] - [DATE:2015-08-19 19:48:51]
+2015-08-19T19:48:51+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:51+00:00 DEBUG (7): ORDER SAVED: [ID:100000090] - [STATUS:] - [DATE:2015-08-19 19:48:51]
+2015-08-19T19:48:51+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:51+00:00 DEBUG (7): ORDER SAVED: [ID:100000090] - [STATUS:new] - [DATE:2015-08-19 19:48:51]
+2015-08-19T19:48:51+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:51+00:00 DEBUG (7): ORDER SAVED: [ID:100000090] - [STATUS:processing] - [DATE:2015-08-19 19:48:51]
+2015-08-19T19:48:51+00:00 DEBUG (7): Order processed, order #: 100000090
+2015-08-19T19:48:51+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:48:51+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:51+00:00 DEBUG (7): ORDER SAVED: [ID:100000090] - [STATUS:complete] - [DATE:2015-08-19 19:48:51]
+2015-08-19T19:48:51+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:51+00:00 DEBUG (7): ORDER SAVED: [ID:100000090] - [STATUS:complete] - [DATE:2015-08-19 19:48:51]
+2015-08-19T19:48:52+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:52+00:00 DEBUG (7): ORDER SAVED: [ID:100000091] - [STATUS:] - [DATE:2015-08-19 19:48:52]
+2015-08-19T19:48:52+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:52+00:00 DEBUG (7): ORDER SAVED: [ID:100000091] - [STATUS:new] - [DATE:2015-08-19 19:48:52]
+2015-08-19T19:48:52+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:52+00:00 DEBUG (7): ORDER SAVED: [ID:100000091] - [STATUS:processing] - [DATE:2015-08-19 19:48:52]
+2015-08-19T19:48:52+00:00 DEBUG (7): Order processed, order #: 100000091
+2015-08-19T19:48:52+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-08-19T19:48:52+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:52+00:00 DEBUG (7): ORDER SAVED: [ID:100000091] - [STATUS:complete] - [DATE:2015-08-19 19:48:52]
+2015-08-19T19:48:52+00:00 DEBUG (7): Inventory model was found!
+2015-08-19T19:48:52+00:00 DEBUG (7): ORDER SAVED: [ID:100000091] - [STATUS:complete] - [DATE:2015-08-19 19:48:52]
+2015-09-10T13:41:52+00:00 DEBUG (7): Inventory model was found!
+2015-09-10T13:41:52+00:00 DEBUG (7): ORDER SAVED: [ID:100000092] - [STATUS:] - [DATE:2015-09-10 13:41:52]
+2015-09-10T13:41:52+00:00 DEBUG (7): Inventory model was found!
+2015-09-10T13:41:52+00:00 DEBUG (7): ORDER SAVED: [ID:100000092] - [STATUS:new] - [DATE:2015-09-10 13:41:52]
+2015-09-10T13:42:29+00:00 DEBUG (7): Inventory model was found!
+2015-09-10T13:42:29+00:00 DEBUG (7): ORDER SAVED: [ID:100000092] - [STATUS:canceled] - [DATE:2015-09-10 13:41:52]
+2015-09-10T13:42:29+00:00 DEBUG (7): Restore quantities, order #: 100000092
+2015-09-10T13:42:29+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-09-10T13:44:18+00:00 DEBUG (7): Inventory model was found!
+2015-09-10T13:44:18+00:00 DEBUG (7): ORDER SAVED: [ID:100000093] - [STATUS:] - [DATE:2015-09-10 13:44:18]
+2015-09-10T13:44:18+00:00 DEBUG (7): Inventory model was found!
+2015-09-10T13:44:18+00:00 DEBUG (7): ORDER SAVED: [ID:100000093] - [STATUS:new] - [DATE:2015-09-10 13:44:18]
+2015-09-10T13:44:44+00:00 DEBUG (7): Inventory model was found!
+2015-09-10T13:44:44+00:00 DEBUG (7): ORDER SAVED: [ID:100000093] - [STATUS:canceled] - [DATE:2015-09-10 13:44:18]
+2015-09-10T13:44:44+00:00 DEBUG (7): Restore quantities, order #: 100000093
+2015-09-10T13:44:44+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-09-10T14:40:24+00:00 DEBUG (7): Inventory model was found!
+2015-09-10T14:40:24+00:00 DEBUG (7): ORDER SAVED: [ID:100000094] - [STATUS:] - [DATE:2015-09-10 14:40:24]
+2015-09-10T14:40:24+00:00 DEBUG (7): Inventory model was found!
+2015-09-10T14:40:24+00:00 DEBUG (7): ORDER SAVED: [ID:100000094] - [STATUS:new] - [DATE:2015-09-10 14:40:24]
+2015-09-10T14:41:16+00:00 DEBUG (7): Inventory model was found!
+2015-09-10T14:41:16+00:00 DEBUG (7): ORDER SAVED: [ID:100000094] - [STATUS:canceled] - [DATE:2015-09-10 14:40:24]
+2015-09-10T14:41:16+00:00 DEBUG (7): Restore quantities, order #: 100000094
+2015-09-10T14:41:16+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-09-10T20:45:56+00:00 DEBUG (7): Inventory model was found!
+2015-09-10T20:45:56+00:00 DEBUG (7): ORDER SAVED: [ID:100000095] - [STATUS:] - [DATE:2015-09-10 20:45:56]
+2015-09-10T20:45:56+00:00 DEBUG (7): Inventory model was found!
+2015-09-10T20:45:56+00:00 DEBUG (7): ORDER SAVED: [ID:100000095] - [STATUS:new] - [DATE:2015-09-10 20:45:56]
+2015-09-10T20:46:39+00:00 DEBUG (7): Inventory model was found!
+2015-09-10T20:46:39+00:00 DEBUG (7): ORDER SAVED: [ID:100000095] - [STATUS:canceled] - [DATE:2015-09-10 20:45:56]
+2015-09-10T20:46:39+00:00 DEBUG (7): Restore quantities, order #: 100000095
+2015-09-10T20:46:39+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-09-10T20:49:28+00:00 DEBUG (7): Inventory model was found!
+2015-09-10T20:49:28+00:00 DEBUG (7): ORDER SAVED: [ID:100000096] - [STATUS:] - [DATE:2015-09-10 20:49:28]
+2015-09-10T20:49:28+00:00 DEBUG (7): Inventory model was found!
+2015-09-10T20:49:28+00:00 DEBUG (7): ORDER SAVED: [ID:100000096] - [STATUS:new] - [DATE:2015-09-10 20:49:28]
+2015-09-10T20:49:52+00:00 DEBUG (7): Inventory model was found!
+2015-09-10T20:49:52+00:00 DEBUG (7): ORDER SAVED: [ID:100000096] - [STATUS:canceled] - [DATE:2015-09-10 20:49:28]
+2015-09-10T20:49:52+00:00 DEBUG (7): Restore quantities, order #: 100000096
+2015-09-10T20:49:52+00:00 DEBUG (7): Notice: Trying to get property of non-object  in /var/www/html/magentotest/app/code/local/Cadena/Checkoutevent/Model/Inventory.php on line 73
+2015-09-25T21:35:12+00:00 DEBUG (7): Inventory model was found!
+2015-09-25T21:35:12+00:00 DEBUG (7): ORDER SAVED: [ID:100000097] - [STATUS:] - [DATE:2015-09-25 21:35:12]
+2015-09-25T21:35:12+00:00 DEBUG (7): Inventory model was found!
+2015-09-25T21:35:12+00:00 DEBUG (7): ORDER SAVED: [ID:100000097] - [STATUS:new] - [DATE:2015-09-25 21:35:12]

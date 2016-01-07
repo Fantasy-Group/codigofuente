@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <TM_Templatef001>
+            <version>2.0.0</version>
+        </TM_Templatef001>
+    </modules>
+    <global>
+        <resources>
+            <templatef001_setup>
+                <setup>
+                    <module>TM_Templatef001</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </templatef001_setup>
+        </resources>
+    </global>
+    <frontend>
+        <tm_layout>
+            <updates>
+                <f001_custom condition="tmcore/isDesignPackageEquals" args="f001">
+                    <file>custom.xml</file>
+                </f001_custom>
+            </updates>
+        </tm_layout>
+    </frontend>
+</config>
